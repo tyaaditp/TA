@@ -1,1 +1,1 @@
-kamu tidak diizinkan OYYYYYYY ajwhdw jshfjkhajhfhajwhdjhaw 
+kamu tidak diizinkan OYYYYYYY kakakakakkak

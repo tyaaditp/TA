@@ -22,7 +22,7 @@ session_start();
 <?php include("template/footer.php"); ?>
 
 <script>
-(function (w, d) {
+/*(function (w, d) {
 	"use strict";
 	var action = "up",
 		canvas = d.querySelector("#cnvs"),
@@ -60,7 +60,7 @@ session_start();
 	color.addEventListener("change", function(e){
 		ctx.shadowColor = e.target.value;
 	});
-}(window, document));
+}(window, document));*/
 </script>
 
 <!--<!DOCTYPE html>

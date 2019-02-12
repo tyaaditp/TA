@@ -76,9 +76,9 @@ session_start();
 <body>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
+    Pilih gambar retina untuk diupload:
     <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+    <input type="submit" value="Upload Gambar" name="submit">
 </form>
 
 </body>

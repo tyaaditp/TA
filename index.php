@@ -4,7 +4,7 @@ session_start();
 
 <?php include("template/header.php"); ?>
 
-	<h2>User CRUD</h2>
+	<!--<h2>User CRUD</h2>
     <h2>Hello <?= $_SESSION['email'] ?></h2>
     <h2>Sebagai <?= $_SESSION['role'] ?></h2>
 	<p>Halaman tentang manajemen pengguna / user </p>
@@ -18,7 +18,7 @@ session_start();
 	<div>
 		<input type="color" id="color">
 	</div>
-</div>
+</div>-->
 <?php include("template/footer.php"); ?>
 
 <script>

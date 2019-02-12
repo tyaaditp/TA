@@ -1,4 +1,3 @@
-hahaha
 <?php
 session_start();
 ?>

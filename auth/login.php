@@ -8,8 +8,11 @@
 	$execute  = mysqli_query($link, $sql);
 	if(mysqli_num_rows($execute) == 1) {
 		$row = mysqli_fetch_array($execute);
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['role'] = $row['role'];
+		$_SESSION['email'] = $row['email'];
+		$_SESSION['id'] = $row['id'];
+		$_SESSION['role'] = $row['role'];
+		$_SESSION['username'] = $row['username'];
+
         if(($_SESSION['role']) == 'SUPERADMIN' ) {
             header('Location: /TA/super.php');
         } else if(($_SESSION['role']) == 'ADMIN' ) {

@@ -1,13 +1,13 @@
 <?php
 	session_start();
 	if(isset($_SESSION['username'])) {
-		header('Location: /sample-app/');
+		header('Location: /TA/');
 		die;
 	}
 ?>
 <?php include("template/header.php"); ?>
 <h2>Login</h2>
-<form action="/sample-app/auth/login.php" method='POST'>
+<form action="/TA/auth/login.php" method='POST'>
 	<div class="form-group">
 		<label for="inputEmail">Email address</label>
 		<input type="email" class="form-control" id="inputEmail" name="email">

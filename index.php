@@ -1344,7 +1344,7 @@ function download_as_image() {
     // extract image data from canvas
     var saved_img = c.toDataURL(cur_img_mime);
     saved_img.replace(cur_img_mime, "image/octet-stream");
-
+ consol.log(saved_img);
     // simulate user click to trigger download of image
     var a      = document.createElement('a');
     a.href     = saved_img;
@@ -7620,6 +7620,22 @@ function project_add_new_file(filename, size) {
 
 function project_file_add_local(event) {
   var user_selected_images = event.target.files;
+  var data = new FormData();
+$.each(user_selected_images, function(key, value)
+{
+    data.append('images[]', value);
+});
+  if (data) {
+  $.ajax({
+    url: "/TA/upload/upload.php",
+    type: "POST",
+    data: data,
+    processData: false,
+    contentType: false,
+    success: function (res) {
+    }
+  });
+}
   var original_image_count = _via_img_count;
 
   var new_img_index_list = [];

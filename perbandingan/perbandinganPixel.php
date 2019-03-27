@@ -5,11 +5,12 @@
  * Code partially inspired by and borrowed from http://pear.php.net/Image_Text test cases
  */
 
- $gambar = __DIR__ . '/../';
+ $gambar = dirname(__DIR__);
  echo $gambar;
 
- $argv1 = $gambar . '/uploads/ori-awdawd-574';
- $argv2 = $gambar . '/uploads/ori-awdawd-650';
+ $argv1 = $gambar . '/uploads/hasil';
+ $argv2 = $gambar . '/uploads/hasil';
+ $argv3 = $gambar .  '/uploads/hasil1';
  
 // create images
 $i1 = @imagecreatefromstring(file_get_contents($argv1));
@@ -65,14 +66,15 @@ for ($x = 0; $x < $sx1; $x++) {
  
 if (!$different_pixels) {
     echo "100%";
-    exit(0);
 } else {
     if (empty($argv3)) {
         $argv3 = 'diffy.jpg'; // default result filename
     }
+    echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
     echo "$different_pixels/$total different pixels, or ", number_format(100 * $different_pixels / $total, 2), '%';
-    exit(1);
 }
 ?>
+
+<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

@@ -1,15 +1,10 @@
 <?php
-/**
- * Shell script to tell if two images are identical.
- * If not, a third image is written - black background with the different pixels painted green
- * Code partially inspired by and borrowed from http://pear.php.net/Image_Text test cases
- */
 
  $gambar = dirname(__DIR__);
  echo $gambar;
 
- $argv1 = $gambar . '/uploads/hasil';
- $argv2 = $gambar . '/uploads/hasil';
+ $argv1 = $gambar . '/uploads/ori.jpg';
+ $argv2 = $gambar . '/uploads/ori75.jpg';
  $argv3 = $gambar .  '/uploads/hasil1';
  
 // create images
@@ -73,7 +68,7 @@ if (!$different_pixels) {
     echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
-    echo "$different_pixels/$total different pixels, or ", number_format(100 * $different_pixels / $total, 2), '%';
+    echo "$different_pixels/$total same pixels, or ", number_format(100-(100 * $different_pixels / $total), 2), '%';
 }
 ?>
 

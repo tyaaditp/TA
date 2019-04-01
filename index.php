@@ -108,7 +108,7 @@ session_start();
         POSSIBILITY OF SUCH DAMAGE.
 
       -->
-    <title>VGG Image Annotator</title>
+    <title>VGG</title>
     <meta name="author" content="Abhishek Dutta">
     <meta name="description" content="VIA is a standalone image annotator application packaged as a single HTML file (< 400 KB) that runs on most modern web browsers.">
 

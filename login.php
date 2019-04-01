@@ -6,7 +6,7 @@
 	}
 ?>
 <?php include("template/header.php"); ?>
-<h2>Login</h2>
+<h2>Login form</h2>
 <form action="/TA/auth/login.php" method='POST'>
 	<div class="form-group">
 		<label for="inputEmail">Email address</label>

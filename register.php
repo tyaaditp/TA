@@ -2,7 +2,7 @@
 
 <?php include("template/header.php"); ?>
 
-<h2>Register</h2>
+<h2>Register haha</h2>
 <form action="/TA/auth/register.php" method='post'>
 	<div class="form-group">
 		<label for="inputEmail">Email address</label>

@@ -3,9 +3,9 @@
  $gambar = dirname(__DIR__);
  echo $gambar;
 
- $argv1 = $gambar . '/uploads/ori.jpg';
- $argv2 = $gambar . '/uploads/ori75.jpg';
- $argv3 = $gambar .  '/uploads/hasil1';
+ $argv1 = $gambar . '/uploads/orif.jpg';
+ $argv2 = $gambar . '/uploads/orif9.jpg';
+ $argv3 = $gambar .  '/uploads/hasil';
  
 // create images
 $i1 = @imagecreatefromstring(file_get_contents($argv1));

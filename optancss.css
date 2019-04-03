@@ -9,13 +9,13 @@
       .top_panel { font-size:0.9rem; display:block; background-color:#212121; color:#ffffff; z-index:1001; margin-bottom:0.5rem;}
 
       /* Navigation menu bar that appear at the top */
-      .menubar { display:inline-block; height:2rem; } /* height needed to avoid extra bottom border */
+      .menubar { display:inline-block; height:1.5rem; } /* height needed to avoid extra bottom border */
       .menubar a:link { color:#eeeeee; text-decoration:none; }
-      .menubar a:visited { color:#270c0c; text-decoration:none; }
+      .menubar a:visited { color:#856d1e; text-decoration:none; }
       .menubar ul { display:block; padding:0; margin:0; }
       .menubar ul li {display:inline; float:left; padding:0.5rem;}
       .menubar li { display:inline; float:left; padding:0.5rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;}
-      .menubar b {display:inline; float:left; padding:0.5rem; cursor:pointer; font-family: Helvetica; font-size:150%; color:rgb(230, 199, 28)}
+      .menubar b {display:inline; float:left; cursor:pointer; font-family: Helvetica; font-size:160%; color:rgb(230, 199, 28)}
       .menubar li:hover {cursor:default; }
 
       .menubar li ul { display:none; background-color:#212121; border:1px solid #616161; min-width:10rem; position:absolute; z-index:100; margin:0.4rem -1rem;}
@@ -206,7 +206,7 @@
       #settings_panel .row { display:table-row; border-bottom:1px solid #f2f2f2; }
       #settings_panel .variable { display:table-cell; width:60%; padding:0.5rem 0.5rem; }
       #settings_panel .variable div { display:block; }
-      #settings_panel .variable .name { }
+      /* #settings_panel .variable .name { } */
       #settings_panel .variable .desc { font-size:0.7em; color:#808080; padding:0.2rem 0rem; }
       #settings_panel .value { display:table-cell; vertical-align:middle; padding-left:1rem; }
 

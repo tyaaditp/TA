@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Trial page user</title>
+    <title>Annotation Page</title>
     <meta name="author" content="TA-L">
     <meta name="description" content="Optan is a standalone image annotator application">
 
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="optancss.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
 
@@ -20,7 +22,8 @@
     <div id="message_panel">
       <div id="message_panel_content" class="content"></div>
     </div>
-
+    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
+  </nav> -->
     <!-- spreadsheet like editor for annotations -->
     <div id="annotation_editor_panel" style="display: none;">
       <div class="button_panel">
@@ -36,7 +39,7 @@
       <!-- here, a child div with id="annotation_editor" is added by javascript -->
     </div>
 
-    <div class="top_panel" id="ui_top_panel">
+    <div class="fixed-top top_panel" id="ui_top_panel">
       <!-- menu bar -->
       <div class="menubar">
         <ul>
@@ -92,12 +95,11 @@
         <a id="region_shape_polygon" onclick="select_region_shape('polygon')"><img src="svg/Pentagon.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polygon" id="shape_polygon"></a>
         <a id="region_shape_point" onclick="select_region_shape('point')"><img src="svg/si-glyph-circle.svg" style="width:10px; height:10px; padding-left: 0.1rem;" title="Point" id="shape_point"></a>
         <a id="region_shape_polyline" onclick="select_region_shape('polyline')"><img src="svg/Polyline.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polyline" id="shape_polyline"></a>
+        <!-- <div class="form-group form-inline similarity"> -->
+        
       </div>
-
-      <div class="form-group form-inline similarity">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Similarity  :  </label>
-          <input type="password" class="form-control col-sm-10" id="inputPassword" placeholder="%">
-      </div>
+      <label for="inputPassword" class="col-sm-2 col-form-label">Similarity  :  </label>
+      <input type="text" class="form-control col-sm-2" id="inputPassword" placeholder="%">
 
       <!-- end of shortcut toolbar -->
       <input type="file" id="invisible_file_input" name="files[]" style="display:none">

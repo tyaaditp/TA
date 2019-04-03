@@ -24,12 +24,16 @@
 
       /* toolbar containing small icons for tools */
       .toolbar { display:inline-block; margin-left:1rem; }
-      .toolbar svg { fill:white; margin: 0.2rem 0.5rem; height:1.2rem;  -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none;}
+      .toolbar svg { fill:white; margin: 0.2rem 0.1rem; height:1.2rem;  -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none;}
       .toolbar svg:hover { fill:yellow; cursor:pointer; }
       .toolbar svg:active { fill:white; }
       .toolbar ul { display:inline-block; padding:0.2rem; margin:0; }
       .toolbar li { display:inline; float:left; padding:0rem 0.3rem; border:1px solid white;} /* main menu items */
       .toolbar li:hover { color:red; cursor:pointer; }
+      .toolbar a {
+        display: inline-block;
+        padding: 0.5rem;
+      }
 
       /* Middle panel: containing #image_panel, #leftsidebar */
       .middle_panel { display:table; table-layout:fixed; width:100%; z-index:1; padding:0;}

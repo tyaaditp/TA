@@ -325,8 +325,8 @@ function file_region() {
 //
 function _via_init() {
   console.log(VIA_NAME);
-  show_message(VIA_NAME + ' (' + VIA_SHORT_NAME + ') version ' + VIA_VERSION +
-               '. Ready !', 2*VIA_THEME_MESSAGE_TIMEOUT_MS);
+  show_message(
+               'Optan Annotator Ready !', 2*VIA_THEME_MESSAGE_TIMEOUT_MS);
 
   if ( _via_is_debug_mode ) {
     document.getElementById('ui_top_panel').innerHTML += '<span>DEBUG MODE</span>';

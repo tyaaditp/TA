@@ -19,9 +19,9 @@
     <div id="user_input_panel"></div>
 
     <!-- to show status messages -->
-    <div id="message_panel">
+    <!-- <div id="message_panel">
       <div id="message_panel_content" class="content"></div>
-    </div>
+    </div> -->
     <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
   </nav> -->
     <!-- spreadsheet like editor for annotations -->
@@ -39,11 +39,11 @@
       <!-- here, a child div with id="annotation_editor" is added by javascript -->
     </div>
 
-    <div class="fixed-top top_panel" id="ui_top_panel">
+    <div class="fixed-top top_panel form-inline" id="ui_top_panel">
       <!-- menu bar -->
       <div class="menubar">
         <ul>
-          <li onclick="show_home_panel()"><b>OPTAN</b></li>
+          <li onclick="show_home_panel()" style="padding: 1px;"><b>OPTAN</b></li>
           <li>Project
             <ul>
               <li onclick="project_save_with_confirm()" title="Save this project">Save</li> <!-- (as a JSON file)-->
@@ -99,7 +99,7 @@
         
       </div>
       <form class="form-inline my-2 my-lg-0">
-        <label class="my-2 my-sm-0" type="submit">Similarity</label>
+        <label class="my-1 my-sm-0" style="background-color: #212121; margin-right: 10px;">Similarity :       </label>
         <input class="form-control mr-sm-2" type="search" placeholder="%" aria-label="Search">
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="logout">Logout</button>
       </form>

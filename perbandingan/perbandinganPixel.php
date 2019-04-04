@@ -1,5 +1,6 @@
 <?php
 
+// Direktori gambar
  $gambar = dirname(__DIR__);
  echo $gambar;
 
@@ -7,11 +8,11 @@
  $argv2 = $gambar . '/uploads/orif9.jpg';
  $argv3 = $gambar .  '/uploads/hasil';
  
-// create images
+// Gambar masuk
 $i1 = @imagecreatefromstring(file_get_contents($argv1));
 $i2 = @imagecreatefromstring(file_get_contents($argv2));
  
-// check if we were given garbage
+// cek gambar
 if (!$i1) {
     echo $argv1 . ' is not a valid image';
     exit(1);
@@ -21,17 +22,17 @@ if (!$i2) {
     exit(1);
 }
  
-// dimensions of the first image
+// cari dimensi gambar
 $sx1 = imagesx($i1);
 $sy1 = imagesy($i1);
  
-// compare dimensions
+// compare dimensi
 if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
     echo "The images are not even the same size";
     exit(1);
 }
  
-// create a diff image
+// create a diff image (gambar perbedaan)
 $diffi = imagecreatetruecolor($sx1, $sy1);
 $green = imagecolorallocate($diffi, 0, 255, 0);
 imagefill($diffi, 0, 0, imagecolorallocate($diffi, 0, 0, 0));
@@ -70,6 +71,7 @@ if (!$different_pixels) {
     $total = $sx1 * $sy1;
     echo "$different_pixels/$total same pixels, or ", number_format(100-(100 * $different_pixels / $total), 2), '%';
 }
+// menampilkan hasil
 ?>
 
 <img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

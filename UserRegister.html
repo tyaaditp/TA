@@ -52,75 +52,32 @@
 
     <!-- Users -->
     <section id="about" class="about">
-        <div class="container">
-            <h2>User Data</h2>
-            <div class="row">
-                <div class="col">No.</div>
-                <div class="col">Name</div>
-                <div class="col">Username</div>
-                <div class="col">Password</div>
-                <div class="col">Email</div>
-                <div class="col">Role</div>
-                <div class="w-100"></div>
-                <div class="col">1</div>
-                <div class="col">User 1</div>
-                <div class="col">user1</div>
-                <div class="col">user123</div>
-                <div class="col">usersatu@gmail.com</div>
-                <div class="col">user</div>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="User's Name Here">
             </div>
-        </div>
-        <a href="UserRegister.html"><button type="button" class="btn btn-lg btn-warning mt-4">Add User</button></a>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Insert User's Username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" class="form-control" id="password" placeholder="Insert User's password">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" class="form-control" id="role" placeholder="User Role">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact mb-4">
-        <div class="container mb-3">
-            <div class="row mb-5 text-center">
-                <div class="col">
-                    <h2>Price</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <div class="card text-grey bg-light mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Contact Us :</h5>
-                            <p class="card-text">navilaakhsanilfitri@gmail.com</p>
-                        </div>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item"><h2>Location</h2></li>
-                        <li class="list-group-item">Gd. Achmad Bakrie, Jalan Ganeca No.10</li>
-                        <li class="list-group-item">Kota Bandung</li>
-                        <li class="list-group-item">40135</li>
-                    </ul>
-                </div>
-                <div class="col-md-7">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name Here">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="telp">Telp Number</label>
-                            <input type="text" class="form-control" id="telp" placeholder="Your Telephone Number">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" class="form-control"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white">

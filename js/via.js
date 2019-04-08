@@ -4011,6 +4011,14 @@ function zoom_in() {
   }
 }
 
+function saving() {
+  if (VIA_CANVAS_ZOOM_LEVELS[_via_canvas_zoom_level_index != 1) {
+      alert('Plase zoom-in/zoom-out until 1X !');
+  } else {
+      download_as_image();
+  }
+}
+
 function zoom_out() {
   if ( _via_display_area_content_name === VIA_DISPLAY_AREA_CONTENT_NAME.IMAGE_GRID ) {
     image_grid_image_size_decrease();

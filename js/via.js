@@ -403,8 +403,10 @@ function download_as_image() {
     var c = document.createElement('canvas');
 
     // ensures that downloaded image is scaled at current zoom level
-    c.width  = _via_reg_canvas.width;
-    c.height = _via_reg_canvas.height;
+    // c.width  = _via_reg_canvas.width;
+    // c.height = _via_reg_canvas.height;
+    c.width  = 1200;
+    c.height = 1900;
 
     var ct = c.getContext('2d');
     // draw current image

@@ -5,7 +5,7 @@
  echo $gambar;
 
  $argv1 = $gambar . '/uploads/orif.jpg';
- $argv2 = $gambar . '/uploads/orif16.jpg';
+ $argv2 = $gambar . '/uploads/orif17.jpg';
  $argv3 = $gambar .  '/uploads/hasil';
  
 // Gambar masuk
@@ -44,8 +44,8 @@ $different_pixels = 0;
 for ($x = 0; $x < $sx1; $x++) {
     for ($y = 0; $y < $sy1; $y++) {
  
-        $rgb1 = imagecolorat($i1, $x, $y); // cari detailnya
-        $pix1 = imagecolorsforindex($i1, $rgb1); //cari detailnya 
+        $rgb1 = imagecolorat($i1, $x, $y);
+        $pix1 = imagecolorsforindex($i1, $rgb1);
  
         $rgb2 = imagecolorat($i2, $x, $y);
         $pix2 = imagecolorsforindex($i2, $rgb2);

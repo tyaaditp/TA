@@ -8,76 +8,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <style type="text/css">
+        #main{
+            background-color: rgb(221, 231, 184);
+            width: 600px;
+            height: 400px;
+            border-radius: 30px;
+        }
+        h2{
+            color: white;
+            background-color: rgb(131, 92, 21);
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        input{
+            text-align: center;
+            width: 300px;
+        }
+        .submit{
+            width: 200px;
+            background-color: rgb(131, 92, 21);
+        }
+    </style>
+
     <title>Add New Data</title>
   </head>
 
-  <body class="text-center">
-    <form method="post" action="connectToDatabase.php">
-        Name : <input type="text" name="nama"><br><br>
-        Email : <input type="email" name="email"><br><br>
-        Username : <input type="text" name="username"><br><br>
-        Password : <input type="password" name="password"><br><br>
-        Role : <input type="text" name="role"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <!-- Navbar-->
-    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold page-scroll" href="#home" style="font-size:150%">OPTAN</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="optan.html" tabindex="-1">Logout</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav> -->
-
-    <!-- Users -->
-    <!-- <section id="about" class="about text-center mt-5 pt-5 pb-4">
-        <div class="col-md-6">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control text-center" id="name" placeholder="User's Name Here">
-                </div>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control text-center" id="username" placeholder="Insert User's Username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control text-center" id="password" placeholder="Insert User's password">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control text-center" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="role">Role</label>
-                    <input type="text" class="form-control text-center" id="role" placeholder="User Role">
-                </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+  <body>
+    <center>
+        <div id="main" class="mt-2">
+            <h2>ADD NEW USER DATA</h2>
+            <form method="post" action="connectToDatabase.php">
+                <input type="text" name="nama" placeholder="Name"><br><br>
+                <input type="email" name="email" placeholder="Email Address"><br><br>
+                <input type="text" name="username" placeholder="Username"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+                <input type="text" name="role" placeholder="User Role"><br><br>
+                <input type="submit" value="Submit" class="submit">
             </form>
         </div>
-    </section> -->
-
+    </center>
 
     <!-- Footer -->
     <footer class="bg-dark text-white fixed-bottom">
@@ -97,6 +67,5 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
   </body>
 </html>

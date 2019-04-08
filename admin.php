@@ -86,6 +86,9 @@ $conn->close();
 ?>
         </table>
     </div>
+    <div>
+        <a class="btn btn-warning btn-sm mt-4" href="">Add New Data</a>
+    </div>
  </section>
 
 

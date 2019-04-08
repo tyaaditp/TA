@@ -8,22 +8,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- My CSS -->
-    <style>
-        section{
-            min-height: 420px;
-        }
-        #project{
-            background-color: rgb(224, 224, 224);
-        }
-    </style>
-
-    <title>OPTAN</title>
+    <title>Add New Data</title>
   </head>
 
   <body class="text-center">
+    <form method="post" action="connectToDatabase.php">
+        Name : <input type="text" name="nama"><br><br>
+        Email : <input type="email" name="email"><br><br>
+        Username : <input type="text" name="username"><br><br>
+        Password : <input type="password" name="password"><br><br>
+        Role : <input type="text" name="role"><br><br>
+        <input type="submit" value="Submit">
+    </form>
     <!-- Navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
+    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
         <div class="container">
             <a class="navbar-brand font-weight-bold page-scroll" href="#home" style="font-size:150%">OPTAN</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,10 +46,10 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- Users -->
-    <section id="about" class="about text-center mt-5 pt-5 pb-4">
+    <!-- <section id="about" class="about text-center mt-5 pt-5 pb-4">
         <div class="col-md-6">
             <form>
                 <div class="form-group">
@@ -78,7 +76,7 @@
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- Footer -->

@@ -12,7 +12,7 @@
                     $host = "localhost";
                     $dbusername = "root";
                     $dbpassword = "";
-                    $dbname = "ta_anotasi";
+                    $dbname = "TA_anotasi";
                     // Create connection
                     $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
                     if (mysqli_connect_error()){

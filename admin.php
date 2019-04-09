@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +46,8 @@
                     <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="optan.html" tabindex="-1">Logout</a>
+                    <a class="nav-link" href="/TA/logout.php" tabindex="-1">Logout</a>
+
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -53,7 +57,7 @@
         </div>
     </div>
  </nav>
- <section class="mt-5 pt-5 text-center">
+ <section class="mt-5 pt-5 text-center mb-5">
     <h2>User Data</h2>
     <div class="tabel">
         <table>
@@ -72,7 +76,8 @@ $conn = mysqli_connect("localhost", "root", "", "TA_anotasi");
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   } 
-  $sql = "SELECT id, nama, email, username, password, role FROM user";
+  $id = $_SESSION['id'];
+  $sql = "SELECT id, nama, email, username, password, role FROM user where parent_id = '$id' "; 
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row

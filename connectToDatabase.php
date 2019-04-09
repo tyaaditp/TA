@@ -1,9 +1,12 @@
 <?php
+ session_start();
  $nama = filter_input(INPUT_POST, 'nama');
  $email = filter_input(INPUT_POST, 'email');
  $username = filter_input(INPUT_POST, 'username');
  $password = filter_input(INPUT_POST, 'password');
  $role = filter_input(INPUT_POST, 'role');
+ $parent_id = $_SESSION['id'];
+ 
  if (!empty($nama)) {
      if (!empty($email)) {
          if (!empty($username)) {
@@ -20,11 +23,12 @@
                     . mysqli_connect_error());
                     }
                     else{
-                    $sql = "INSERT INTO user (nama, email, username, password, role)
-                    values ('$nama','$email','$username','$password','$role')";
+                    $sql = "INSERT INTO user (nama, email, username , parent_id, password, role)
+                    values ('$nama','$email','$username','$parent_id','$password','$role')";
                     if ($conn->query($sql)){
                         $link_address = 'admin.php';
-                        echo "<a href='$link_address'>Click here for back to admin page</a>";
+                        header('Location: /TA/admin.php');
+                        //echo "<a href='$link_address'>Click here for back to admin page</a>";
                     // echo "New record is inserted sucessfully";
                     }
                     else{

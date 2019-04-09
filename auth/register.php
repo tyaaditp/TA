@@ -5,7 +5,7 @@
 	$pass = $_POST['password'];
 	$username = $_POST['username'];
     $name = $_POST['name'];
-    $role = $_POST['role'];
+    $role = 'admin';
 	
 	$sql = "INSERT INTO user(nama, email, username, password, role) VALUES (
 				'$name','$email','$username','$pass','$role')";

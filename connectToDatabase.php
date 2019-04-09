@@ -23,7 +23,7 @@
                     $sql = "INSERT INTO user (nama, email, username, password, role)
                     values ('$nama','$email','$username','$password','$role')";
                     if ($conn->query($sql)){
-                        $link_address = 'Admin.php';
+                        $link_address = 'admin.php';
                         echo "<a href='$link_address'>Click here for back to admin page</a>";
                     // echo "New record is inserted sucessfully";
                     }

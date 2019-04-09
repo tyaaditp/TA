@@ -516,11 +516,16 @@ function show_image_grid_view() {
 //
 function sel_local_images() {
   // source: https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications
+  //hide on select file
+  
   if (invisible_file_input) {
     invisible_file_input.setAttribute('multiple', 'multiple')
     invisible_file_input.accept   = '.jpg,.jpeg,.png,.bmp';
     invisible_file_input.onchange = project_file_add_local;
     invisible_file_input.click();
+
+    $('#save-anotation-and-original').show();
+  $('#save-only-anotation').hide();
   }
 }
 
@@ -5283,7 +5288,10 @@ function setup_user_input_panel(ok_handler, input, config, cancel_handler) {
   c.setAttribute('class', 'content');
   var html = [];
   html.push('<p class="title">' + config.title + '</p>');
-
+  html.push('<div id="user_list"></div>');
+  html.push('<div id="user_images"></div>');
+  html.push('<button onclick="loadUser()"> Chose Doctor </button>');
+  html.push('<button onclick="loadImages()"> Load Images </button>');
   html.push('<div class="user_inputs">');
   var key;
   for ( key in _via_user_input_data ) {
@@ -6787,10 +6795,12 @@ function project_file_add_abs_path_input_done(input) {
 }
 
 function project_file_add_url_with_input() {
-  var config = {'title':'Add File using URL' };
-  var input = { 'url': { type:'text', name:'add one URL', placeholder:'http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg', disabled:false, size:50 },
-		'url_list': { type:'textarea', name:'or, add multiple URL (one url per line)', placeholder:'http://www.example.com/image1.jpg\nhttp://www.example.com/image2.jpg\nhttp://www.example.com/image3.png', disabled:false, rows:5, cols:80 }
+  var config = {'title':'Chose Your Doctor References' };
+  var input = { 'url': { type:'text', name:'Chosen', placeholder:'Please make choices', disabled:true, size:50 },
               };
+    //           var input = { 'url': { type:'text', name:'add one URL', placeholder:'http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg', disabled:false, size:50 },
+		// 'url_list': { type:'textarea', name:'or, add multiple URL (one url per line)', placeholder:'http://www.example.com/image1.jpg\nhttp://www.example.com/image2.jpg\nhttp://www.example.com/image3.png', disabled:false, rows:5, cols:80 }
+    //           };
 
   invoke_with_user_inputs(project_file_add_url_input_done, input, config);
 }

@@ -4,8 +4,8 @@
  $gambar = dirname(__DIR__);
  echo $gambar;
 
- $argv1 = $gambar . '/uploads/orif.jpg';
- $argv2 = $gambar . '/uploads/orif17.jpg';
+ $argv1 = $gambar . '/uploads/cek.jpg';
+ $argv2 = $gambar . '/uploads/cek1.jpg';
  $argv3 = $gambar .  '/uploads/hasil';
  
 // Gambar masuk

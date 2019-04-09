@@ -12,6 +12,7 @@
 		$_SESSION['id'] = $row['id'];
 		$_SESSION['role'] = $row['role'];
 		$_SESSION['username'] = $row['username'];
+		$_SESSION['parent_id'] = $row['parent_id'];
 
         if(($_SESSION['role']) == 'admin' ) {
             header('Location: /TA/admin.php');

@@ -4,8 +4,8 @@
  $gambar = dirname(__DIR__);
  echo $gambar;
 
- $argv1 = $gambar . '/uploads/orif.jpg';
- $argv2 = $gambar . '/uploads/orif16.jpg';
+ $argv1 = $gambar . $_GET['image1'];
+ $argv2 = $gambar . $_GET['image2'];
  $argv3 = $gambar .  '/uploads/hasil';
  
 // Gambar masuk
@@ -74,4 +74,6 @@ if (!$different_pixels) {
 // menampilkan hasil
 ?>
 
+<img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' >
+<img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' >
 <img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

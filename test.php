@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_row($sql)){
 ?>
 </select>    
 <input type="submit" name="action" value="pilih" />
-</form>    
+<div id="url_here" > </div>
 <?php
 if(isset($_POST["action"]) && ($_POST["action"] == "pilih")) {
     $sql2 = mysqli_query($link, "SELECT image FROM image_original WHERE user_id='".$_POST["coba"]."'");
@@ -32,7 +32,8 @@ if(isset($_POST["action"]) && ($_POST["action"] == "pilih")) {
             if(substr($row2[0], -3) != "jpg")
                 $row2[0] .= ".jpg"; 
                 */
-            echo '<a href="index.php"><img src="'.$row2[0].'" alt="gambar origninal" width="200"/></a><br/>';
+                $link = "clicked('$row2[0]')";
+                echo '<img onclick="'.$link.'" id="img" src="'.$row2[0].'" alt="gambar origninal" width="200"/><br/>';
 
         }
 
@@ -43,5 +44,3 @@ if(isset($_POST["action"]) && ($_POST["action"] == "pilih")) {
 
 
 ?>
-
-

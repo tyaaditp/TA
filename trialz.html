@@ -13,7 +13,7 @@
   </head>
 
   <body onload="_via_init()" onresize="_via_update_ui_components()">
-
+    <input type="hidden" id="image_original_id" />
     <!-- used by invoke_with_user_inputs() to gather user inputs -->
     <div id="user_input_panel"></div>
 
@@ -45,33 +45,34 @@
           <li>Project
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
-              <li onclick="render()" title="render">Save</li> <!-- (as a JSON file)-->
-              <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li>
+              <li id="save-anotation-and-original" onclick="render()" title="save to database">Save All</li> <!-- (as a JSON file)-->
+              <li id="save-only-anotation" onclick="save_anotation_only()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
+              <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
               <!-- <li class="submenu_divider"></li> -->
               <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li>
-              <li onclick="sel_local_images()" title="Add images from reference expert">Select Reference</li>
-              <!-- <li onclick="project_file_add_url_with_input()" title="Add images from a web URL (e.g. http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg)">Add files from URL</li>
-              <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li>
-              <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li> -->
+              <!-- <li onclick="sel_local_images()" title="Add images from reference expert">Select Reference</li> -->
+              <li onclick="project_file_add_url_with_input()" title="Select Reference">Select Reference</li>
+              <!-- <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li> -->
+              <!-- <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li> -->
               <!-- <li onclick="project_file_remove_with_confirm()" title="Remove selected file (i.e. file currently being shown)">Remove file</li> -->
-              <!-- <li class="submenu_divider"></li>
-              <li onclick="sel_local_data_file('attributes')" title="Import region and file attributes from a JSON file">Import region/file attributes</li> -->
-              <li onclick="project_save_attributes()" title="Export region and file attributes to a JSON file">Export region/file attributes</li>
+              <li class="submenu_divider"></li>
+              <!-- <li onclick="sel_local_data_file('attributes')" title="Import region and file attributes from a JSON file">Import region/file attributes</li> -->
+              <!-- <li onclick="project_save_attributes()" title="Export region and file attributes to a JSON file">Export region/file attributes</li> -->
             </ul>
           </li>
 
           <li>Annotation
             <ul>
-              <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li>
+              <!-- <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li> -->
               <!-- <li onclick="download_all_region_data('json')" title="Export annotaitons to a JSON file">Export Annotations (as json)</li>
               <li onclick="" class="submenu_divider"></li> -->
-              <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li>
+              <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li> -->
               <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li> -->
               <li class="submenu_divider"></li>
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
-              <li onclick="" title="Compare the image to check similarity">Check the Similarity</li>
+              <li  title="Compare the image to check similarity"> <a href= "/TA/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
           </li>
 
@@ -156,7 +157,7 @@
       <form class="form-inline my-2 my-lg-1" style="display: inline-block;">
         <input class="form-control mr-sm-2 pb-2" type="search" placeholder="Similarity" aria-label="Search">
         <!-- <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" style="">Logout</button> -->
-        <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="optan.html">Logout</a>
+        <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a>
         
       </form>
       

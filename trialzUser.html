@@ -41,7 +41,8 @@
       <!-- menu bar -->
       <div class="menubar">
         <ul>
-          <li onclick="show_home_panel()" style="cursor:pointer; font-family: Helvetica; font-size:175%; color:rgb(230, 199, 28)"><b>OPTAN</b></li>
+          <li><img src="minilogo.png" alt="minilogo optan" style="width:5em;"></li>
+          <!-- <li onclick="show_home_panel()" style="cursor:pointer; font-family: Helvetica; font-size:175%; color:rgb(230, 199, 28)"><b>OPTAN</b></li> -->
           <li>Project
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
@@ -51,11 +52,11 @@
               <!-- <li class="submenu_divider"></li> -->
               <!-- <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li> -->
               <!-- <li onclick="sel_local_images()" title="Add images from reference expert">Select Reference</li> -->
+              <li class="submenu_divider"></li>
               <li onclick="project_file_add_url_with_input()" title="Select Reference">Select Reference</li>
               <!-- <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li> -->
               <!-- <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li> -->
               <!-- <li onclick="project_file_remove_with_confirm()" title="Remove selected file (i.e. file currently being shown)">Remove file</li> -->
-              <li class="submenu_divider"></li>
               <!-- <li onclick="sel_local_data_file('attributes')" title="Import region and file attributes from a JSON file">Import region/file attributes</li> -->
               <!-- <li onclick="project_save_attributes()" title="Export region and file attributes to a JSON file">Export region/file attributes</li> -->
             </ul>
@@ -68,7 +69,7 @@
               <li onclick="" class="submenu_divider"></li> -->
               <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li> -->
               <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li> -->
-              <li class="submenu_divider"></li>
+              <!-- <li class="submenu_divider"></li> -->
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
@@ -110,8 +111,8 @@
         <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="project_save_with_confirm()"></a> -->
         <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="download_as_image()"></a>
         <a><img src="svg/si-glyph-gear.svg" style="width:16px; height:16px;" title="Setting" onclick="settings_panel_toggle()"></a>
-        <a><img src="svg/si-glyph-arrow-thin-left.svg" style="width:16px; height:16px;" title="Previous Project" id="icon_prev" onclick="move_to_prev_image()"></a>
-        <a><img src="svg/si-glyph-arrow-thin-right.svg" style="width:16px; height:16px;" title="Next Project" id="icon_next" onclick="move_to_next_image()"></a>
+        <!-- <a><img src="svg/si-glyph-arrow-thin-left.svg" style="width:16px; height:16px;" title="Previous Project" id="icon_prev" onclick="move_to_prev_image()"></a>
+        <a><img src="svg/si-glyph-arrow-thin-right.svg" style="width:16px; height:16px;" title="Next Project" id="icon_next" onclick="move_to_next_image()"></a> -->
         <a><img src="svg/si-glyph-zoom-in.svg" style="width:16px; height:16px;" title="Zoom In" id="icon_zoomin" onclick="zoom_in()"></a>
         <a><img src="svg/si-glyph-zoom-out.svg" style="width:16px; height:16px;" title="Zoom Out" id="icon_zoomout" onclick="zoom_out()"></a>
         <a><img src="svg/si-glyph-document-copy.svg" style="width:16px; height:16px;" title="Copy Region" id="icon_copy" onclick="copy_sel_regions()"></a>
@@ -145,7 +146,7 @@
         <!-- <svg onclick="del_sel_regions()" viewbox="0 0 24 24"><use xlink:href="#icon_close"></use><title>Delete Region</title></svg> -->
       
       <!-- Annotation Region Shape -->
-        <a id="region_shape_rect" class="selected" onclick="select_region_shape('rect')"><img src="svg/Rectangle_Stroked.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Rectangle"></a>
+        <!-- <a id="region_shape_rect" class="selected" onclick="select_region_shape('rect')"><img src="svg/Rectangle_Stroked.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Rectangle"></a> -->
         <a id="region_shape_circle" onclick="select_region_shape('circle')"><img src="svg/circle.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Circle" id="shape_circle"></a>
         <a id="region_shape_ellipse" onclick="select_region_shape('ellipse')"><img src="svg/Ellipse.svg" style="width:30px; height:21px; padding-left: 0.1rem;" title="Ellipse" id="shape_ellipse"></a>
         <a id="region_shape_polygon" onclick="select_region_shape('polygon')"><img src="svg/Pentagon.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polygon" id="shape_polygon"></a>

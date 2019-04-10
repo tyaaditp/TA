@@ -9,10 +9,10 @@
       .top_panel { font-size:0.9rem; display:block; background-color:#212121; color:#ffffff; z-index:1001; margin-bottom:0.5rem;}
 
       /* Navigation menu bar that appear at the top */
-      .menubar { display:inline-block; height:3rem; } /* height needed to avoid extra bottom border */
+      .menubar { display:inline-block; height: 2.5rem; } /* height needed to avoid extra bottom border */
       .menubar a:link { color:#eeeeee; text-decoration:none; }
       .menubar a:visited { color:#856d1e; text-decoration:none; }
-      .menubar ul { padding:0; margin:0; display: inline-block;}
+      .menubar ul {margin:0; display: inline-block;}
       .menubar ul li {display:inline; float:left; padding:0.5rem;}
       .menubar li { display:inline; float:left; padding:0 rem0.5rem; font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;}
       .menubar b {display:inline; float:left; cursor:pointer; font-family: Helvetica; font-size:160%; color:rgb(230, 199, 28)}
@@ -25,7 +25,7 @@
       .menubar li:hover ul { display:block; }
 
       /* toolbar containing small icons for tools */
-      .toolbar { display:inline-block; margin-left:1rem; }
+      .toolbar { display:inline-block; margin-left:1rem; margin-top: 0;}
       .toolbar svg { fill:white; margin: 0.2rem 0.1rem; height:1.2rem;  -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none;}
       .toolbar svg:hover { fill:yellow; cursor:pointer; }
       .toolbar svg:active { fill:white; }

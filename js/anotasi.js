@@ -1,8 +1,10 @@
 function render() {
+
     if ( _via_display_area_content_name !== VIA_DISPLAY_AREA_CONTENT_NAME['IMAGE'] ) {
       show_message('This functionality is only available in single image view mode');
       return;
     } else {
+      // alert('Images Saved !');
       var c = document.createElement('canvas');
   
       // ensures that downloaded image is scaled at current zoom level

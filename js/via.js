@@ -4021,6 +4021,7 @@ function saving() {
       alert('Plase zoom-in/zoom-out until 1X !');
   } else {
       render();
+      alert('Images Saved !');
   }
 }
 

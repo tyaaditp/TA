@@ -33,14 +33,16 @@ session_start();
     </style>
 </head>
 <body>
+
  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
-    <div class="container">
-        <a class="navbar-brand font-weight-bold page-scroll" href="#home" style="font-size:150%">OPTAN</a>
+    <div class="logo"><img src="minilogo.png" alt="minilogo optan" style="width:70px;"></div>
+    <div class="container" style="margin: 0px 5px;">
+        <!-- <a class="navbar-brand font-weight-bold page-scroll" href="#home" style="font-size:150%">OPTAN</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 120%;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -50,10 +52,10 @@ session_start();
 
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </div>
  </nav>
@@ -102,8 +104,9 @@ $conn->close();
         <div class="container text-center">
             <div class="row pt-2">
                 <div class="col">
-                    <p style="font-size:12px">&copy; 2019 | Built with <img src="svg/si-glyph-heart.svg" style="width:16px;
-                        height:16px;"> by Nav.</p>
+                    <p style="font-size:12px">&copy; 2019 | TA.1819.1.1.L</p>
+                    <!-- <p style="font-size:12px">&copy; 2019 | Built with <img src="svg/si-glyph-heart.svg" style="width:16px;
+                        height:16px;"> by Nav.</p> -->
                 </div>
             </div>
         </div>

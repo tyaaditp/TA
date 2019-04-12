@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Trial page</title>
+    <title>Coba</title>
     <meta name="author" content="TA-L">
     <meta name="description" content="Optan is a standalone image annotator application">
 
@@ -36,40 +36,25 @@
       </div>
       <!-- here, a child div with id="annotation_editor" is added by javascript -->
     </div>
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="top_panel" id="ui_top_panel">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container " id="ui_top_panel">
         <!-- menu bar -->
-      <div class="menubar">
-        <img src="minilogo.png" alt="minilogo optan" style="width:5em;">
-        <ul>
+      <div class="menubar collapse navbar-collapse" id="navbarSupportedContent">
+        <img src="minilogo.png" alt="minilogo optan" class="mr-2" style="width:5em;">
+        <ul class="navbar-nav mr-auto" style="color: white;">
           <!-- <li onclick="show_home_panel()" style="cursor:pointer; font-family: Helvetica; font-size:175%; color:rgb(230, 199, 28)"><b>OPTAN</b></li> -->
-          <li>Project
+          <li class="nav-item active">Project
             <ul>
-              <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
+              
               <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
               <li id="save-only-anotation" onclick="save_anotation_only()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
-              <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
-              <!-- <li class="submenu_divider"></li> -->
-              <!-- <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li> -->
-              <!-- <li onclick="sel_local_images()" title="Add images from reference expert">Select Reference</li> -->
               <li class="submenu_divider"></li>
               <li onclick="project_file_add_url_with_input()" title="Select Reference">Select Reference</li>
-              <!-- <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li> -->
-              <!-- <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li> -->
-              <!-- <li onclick="project_file_remove_with_confirm()" title="Remove selected file (i.e. file currently being shown)">Remove file</li> -->
-              <!-- <li onclick="sel_local_data_file('attributes')" title="Import region and file attributes from a JSON file">Import region/file attributes</li> -->
-              <!-- <li onclick="project_save_attributes()" title="Export region and file attributes to a JSON file">Export region/file attributes</li> -->
             </ul>
           </li>
 
-          <li>Annotation
+          <li class="nav-item active">Annotation
             <ul>
-              <!-- <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li> -->
-              <!-- <li onclick="download_all_region_data('json')" title="Export annotaitons to a JSON file">Export Annotations (as json)</li>
-              <li onclick="" class="submenu_divider"></li> -->
-              <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li> -->
-              <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li> -->
-              <!-- <li class="submenu_divider"></li> -->
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
@@ -77,74 +62,28 @@
             </ul>
           </li>
 
-          <li>View
+          <li class="nav-item active">View
             <ul>
-              <!-- <li onclick="image_grid_toggle()" title="Toggle between single image view and image grid view">Toggle image grid view</li>
-              <li onclick="leftsidebar_toggle()" title="Show or hide the sidebar shown in left hand side">Toggle left sidebar</li>
-<li onclick="toggle_img_fn_list_visibility()" title="Show or hide a panel to update annotations corresponding to file and region">Toggle image filename list</li>
-              <li class="submenu_divider"></li>
-              <li onclick="toggle_attributes_editor()" title="Show or hide a panel to update file and region attributes">Toggle attributes editor</li>
-              <li onclick="annotation_editor_toggle_all_regions_editor()" title="Show or hide a panel to update annotations corresponding to file and region">Toggle annotation editor (Space)</li>
-              <li class="submenu_divider"></li> -->
+              
               <li onclick="toggle_region_boundary_visibility()" title="Show or hide the region boundaries">Show/hide region boundaries (b)</li>
               <li onclick="toggle_region_id_visibility()" title="Show or hide the region id labels">Show/hide region labels (l)</li>
             </ul>
           </li>
 
-          <!--<li>Help
-            <ul>
-              <li onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_GETTING_STARTED)" title="Show a guide to get started with this application">Getting Started</li>
-              <li title="Visit the project page for this application"><a href="http://www.robots.ox.ac.uk/~vgg/software/via/" target="_blank">VGG Project Page</a></li>
-              <li onclick="" title="Report an issue to the developers of this application (requires an account at gitlab.com)"><a href="https://gitlab.com/vgg/via/issues" target="_blank">Report issues</a></li>
-              <li class="submenu_divider"></li>
-              <li><a target="_blank" href="https://gitlab.com/vgg/via/blob/master/Contributors.md" title="List of people who have contributed towards the development of VIA">Contributors</a></li>
-              <li onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_LICENSE)" title="View license of this application">License</li>
-              <li onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_ABOUT)" title="Show more details about this application">About VIA</li>
-            </ul>
-          </li>-->
+          
         </ul>
       </div> <!-- end of menubar -->
 
       <!-- Shortcut toolbar -->
-      <div class="toolbar">
+      <div class="toolbar collapse navbar-collapse" id="navbarSupportedContent">
         <a><img src="svg/si-glyph-folder-open.svg" style="width:16px; height:16px;" title="Open File" id="icon_open" onclick="project_open_select_project_file()"></a>
-        <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="project_save_with_confirm()"></a> -->
-        <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="download_as_image()"></a> -->
-        <!-- <a><img src="svg/si-glyph-gear.svg" style="width:16px; height:16px;" title="Setting" onclick="settings_panel_toggle()"></a> -->
-        <!-- <a><img src="svg/si-glyph-arrow-thin-left.svg" style="width:16px; height:16px;" title="Previous Project" id="icon_prev" onclick="move_to_prev_image()"></a>
-        <a><img src="svg/si-glyph-arrow-thin-right.svg" style="width:16px; height:16px;" title="Next Project" id="icon_next" onclick="move_to_next_image()"></a> -->
         <a><img src="svg/si-glyph-zoom-in.svg" style="width:16px; height:16px;" title="Zoom In" id="icon_zoomin" onclick="zoom_in()"></a>
         <a><img src="svg/si-glyph-zoom-out.svg" style="width:16px; height:16px;" title="Zoom Out" id="icon_zoomout" onclick="zoom_out()"></a>
         <a><img src="svg/si-glyph-document-copy.svg" style="width:16px; height:16px;" title="Copy Region" id="icon_copy" onclick="copy_sel_regions()"></a>
         <a><img src="svg/si-glyph-clipboard.svg" style="width:16px; height:16px;" title="Paste Region" id="icon_paste" onclick="paste_sel_regions_in_current_image()"></a>
         <a><img src="svg/si-glyph-square-eight-angle-point.svg" style="width:16px; height:16px;" title="Select Region" id="icon_selectall" onclick="sel_all_regions()"></a>
         <a><img src="svg/si-glyph-delete.svg" style="width:16px; height:16px;" title="Delete Selected Region" id="icon_close" onclick="del_sel_regions()"></a>
-        <!-- <svg onclick="project_save_with_confirm()" viewbox="0 0 24 24"><use xlink:href="#icon_save"></use><title>Save Project</title></svg>
-        <svg onclick="settings_panel_toggle()" viewbox="0 0 24 24"><use xlink:href="#icon_settings"></use><title>Update Project Settings</title></svg> -->
-        <!--
-        <svg onclick="" viewbox="0 0 24 24"><use xlink:href="#icon_checkbox"></use><title>Locate Files</title></svg>
-        -->
-
-        <!-- <svg onclick="sel_local_data_file('annotations')" style="margin-left:1rem;" viewbox="0 0 24 24"><use xlink:href="#icon_fileupload"></use><title>Import Annotations from CSV</title></svg>
-        <svg onclick="download_all_region_data('csv')" viewbox="0 0 24 24"><use xlink:href="#icon_filedownload"></use><title>Download Annotations as CSV</title></svg> -->
-
-        <!--<svg onclick="image_grid_toggle()" id="toolbar_image_grid_toggle" style="margin-left:1rem;" viewbox="0 0 24 24"><use xlink:href="#icon_gridon"></use><title>Switch to Image Grid View</title></svg>
-        <svg onclick="annotation_editor_toggle_all_regions_editor()" viewbox="0 0 24 24"><use xlink:href="#icon_insertcomment"></use><title>Toggle Annotation Editor</title></svg>-->
-
-        <!-- <svg onclick="move_to_prev_image()" style="margin-left:1rem;" viewbox="0 0 24 24"><use xlink:href="#icon_prev"></use><title>Previous</title></svg>
-        <svg onclick="toggle_img_fn_list_visibility()" viewbox="0 0 24 24"><use xlink:href="#icon_list"></use><title>Toggle Filename List</title></svg>
-        <svg onclick="move_to_next_image()" viewbox="0 0 24 24"><use xlink:href="#icon_next"></use><title>Next</title></svg>
-
-        <svg onclick="zoom_in()" style="margin-left:1rem;" viewbox="0 0 24 24"><use xlink:href="#icon_zoomin"></use><title>Zoom In</title></svg>
-        <svg onclick="zoom_out()" viewbox="0 0 24 24"><use xlink:href="#icon_zoomout"></use><title>Zoom Out</title></svg>
-
-        <svg onclick="sel_all_regions()" viewbox="0 0 24 24" style="margin-left:1rem;"><use xlink:href="#icon_selectall"></use><title>Select All Regions</title></svg>
-        <svg onclick="copy_sel_regions()" viewbox="0 0 24 24"><use xlink:href="#icon_copy"></use><title>Copy Regions</title></svg>
-        <svg onclick="paste_sel_regions_in_current_image()" viewbox="0 0 24 24"><use xlink:href="#icon_paste"></use><title>Paste Regions</title></svg> -->
-        <!--<svg onclick="paste_to_multiple_images_with_confirm()" viewbox="0 0 24 24"><use xlink:href="#icon_pasten"></use><title>Paste Region in Multiple Images</title></svg>
-        <svg onclick="del_sel_regions_with_confirm()" viewbox="0 0 24 24"><use xlink:href="#icon_pasteundo"></use><title>Undo Regions Pasted in Multiple Images</title></svg>-->
-        <!-- <svg onclick="del_sel_regions()" viewbox="0 0 24 24"><use xlink:href="#icon_close"></use><title>Delete Region</title></svg> -->
-      
+        
       <!-- Annotation Region Shape -->
         <a id="region_shape_rect" class="selected" onclick="select_region_shape('rect')" style="display: none;"><img src="svg/Rectangle_Stroked.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Rectangle"></a>
         <a id="region_shape_circle" onclick="select_region_shape('circle')"><img src="svg/circle.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Circle" id="shape_circle"></a>
@@ -154,19 +93,9 @@
         <a id="region_shape_polyline" onclick="select_region_shape('polyline')"><img src="svg/Polyline.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polyline" id="shape_polyline"></a>
         
       </div>
-      <form action="" class="form-inline" style="display: inline-block;">
-        <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a>
+      <form action="" class="form-inline my-2 my-lg-0">
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a>
       </form>
-      <!-- <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a> -->
-      <!-- <form class="form-inline my-2 my-lg-1" style="display: inline-block;">
-        <input class="form-control mr-sm-2 pb-2" type="search" placeholder="Similarity" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" style="">Logout</button>
-        
-      </form> -->
-      
-      <!-- <div class="user">
-        <a>Logout</a>
-      </div> -->
 
       <!-- end of shortcut toolbar -->
       <input type="file" id="invisible_file_input" name="files[]" style="display:none">

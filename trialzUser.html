@@ -36,14 +36,15 @@
       </div>
       <!-- here, a child div with id="annotation_editor" is added by javascript -->
     </div>
-
-    <div class="top_panel" id="ui_top_panel">
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container" id="ui_top_panel">
       <!-- menu bar -->
-      <div class="menubar">
-        <img src="minilogo.png" alt="minilogo optan" style="width:5em;">
-        <ul>
+      <div class="menubar collapse navbar-collapse" id="navbarSupportedContent">
+        <img src="minilogo.png" alt="minilogo optan" class="mr-2" style="width:5em;">
+        <ul class="navbar-nav mr-auto" style="color: white;">
           <!-- <li onclick="show_home_panel()" style="cursor:pointer; font-family: Helvetica; font-size:175%; color:rgb(230, 199, 28)"><b>OPTAN</b></li> -->
-          <li>Project
+          <li class="nav-item active">Project
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
               <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
@@ -62,7 +63,7 @@
             </ul>
           </li>
 
-          <li>Annotation
+          <li class="nav-item active">Annotation
             <ul>
               <!-- <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li> -->
               <!-- <li onclick="download_all_region_data('json')" title="Export annotaitons to a JSON file">Export Annotations (as json)</li>
@@ -77,7 +78,7 @@
             </ul>
           </li>
 
-          <li>View
+          <li class="nav-item active">View
             <ul>
               <!-- <li onclick="image_grid_toggle()" title="Toggle between single image view and image grid view">Toggle image grid view</li>
               <li onclick="leftsidebar_toggle()" title="Show or hide the sidebar shown in left hand side">Toggle left sidebar</li>
@@ -106,7 +107,7 @@
       </div> <!-- end of menubar -->
 
       <!-- Shortcut toolbar -->
-      <div class="toolbar">
+      <div class="toolbar collapse navbar-collapse" id="navbarSupportedContent">
         <a><img src="svg/si-glyph-folder-open.svg" style="width:16px; height:16px;" title="Open File" id="icon_open" onclick="project_open_select_project_file()"></a>
         <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="project_save_with_confirm()"></a> -->
         <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="download_as_image()"></a> -->
@@ -154,7 +155,10 @@
         <a id="region_shape_polyline" onclick="select_region_shape('polyline')"><img src="svg/Polyline.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polyline" id="shape_polyline"></a>
         
       </div>
-      <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a>
+      <form action="" class="form-inline my-2 my-lg-0">
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;">Logout</a>
+      </form>
+      <!-- <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a> -->
       <!-- <form class="form-inline my-2 my-lg-1" style="display: inline-block;">
         <input class="form-control mr-sm-2 pb-2" type="search" placeholder="Similarity" aria-label="Search">
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" style="">Logout</button>
@@ -168,6 +172,8 @@
       <!-- end of shortcut toolbar -->
       <input type="file" id="invisible_file_input" name="files[]" style="display:none">
     </div> <!-- endof #top_panel -->
+  </nav>
+    
 
     <!-- Middle Panel contains a left-sidebar and image display areas -->
     <div class="middle_panel">

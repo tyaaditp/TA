@@ -73,7 +73,7 @@ if(mysqli_num_rows($sql2)>0) {
             
             echo '</tr>';
 
-           
+    
 
     }
 

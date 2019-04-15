@@ -70,10 +70,22 @@ if (!$different_pixels) {
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
     echo "<h4 style="text-align:center; font-family: sans-serif;"> Result </h4>";
-    echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> </textarea></p>""$different_pixels/$total same pixels, or ", number_format(100-(100 * $different_pixels / $total), 2), '%';
+    $sim = $different_pixels / $total;
+    $similari = number_format(100-(100 * $sim), 2);
+    // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$different_pixels/$total.' same pixels, or '.number_format(100-(100 * $different_pixels / $total), 2).' % </textarea></p>" ;
+    echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
+    echo "<br>";
+    echo "<br>";
 }
 // menampilkan hasil
 ?>
-
+<?php
+    if(($_SESSION['role']) == 'Expert' ) {
+        echo '<a href="/TA/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
+    }
+    else {
+        echo '<a href="/TA/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
+    }
+?>
 <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
 <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>

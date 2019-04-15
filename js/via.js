@@ -4025,6 +4025,16 @@ function saving() {
   }
 }
 
+function saving_annotation() {
+  if (VIA_CANVAS_ZOOM_LEVELS[_via_canvas_zoom_level_index] != 1) {
+      alert('Plase zoom-in/zoom-out until 1X !');
+  } else {
+      save_anotation_only();
+      alert('Images Saved !');
+  }
+}
+
+
 function zoom_out() {
   if ( _via_display_area_content_name === VIA_DISPLAY_AREA_CONTENT_NAME.IMAGE_GRID ) {
     image_grid_image_size_decrease();

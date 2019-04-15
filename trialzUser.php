@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Trial page</title>
+    <title>Annotation Page</title>
     <meta name="author" content="TA-L">
     <meta name="description" content="Optan is a standalone image annotator application">
 
@@ -51,7 +51,7 @@ session_start();
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
               <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
-              <li id="save-only-anotation" onclick="save_anotation_only()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
+              <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
               <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
               <!-- <li class="submenu_divider"></li> -->
               <!-- <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li> -->

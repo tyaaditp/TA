@@ -98,6 +98,7 @@ function save_anotation_only () {
 
         saveAnotationOnlyToDatabase(image_url, img_anotated_blob) ;
       }
+      alert('image saved !');
 }
 
   function dataURItoBlob (dataURI) {

@@ -69,11 +69,13 @@ if (!$different_pixels) {
     echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
-    echo "<h3 style="text-align:center; font-family: sans-serif;"> Result </h3>";
+    // echo "<h3 style="text-align:center; font-family: sans-serif;"> Result </h3>";
+    echo "<h3> Result </h3>";
     $sim = $different_pixels / $total;
     $similari = number_format(100-(100 * $sim), 2);
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$different_pixels/$total.' same pixels, or '.number_format(100-(100 * $different_pixels / $total), 2).' % </textarea></p>" ;
-    echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
+    // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
+    echo "<p><textarea> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
     echo "<br>";
     echo "<br>";
 }

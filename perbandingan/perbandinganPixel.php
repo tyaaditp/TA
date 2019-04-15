@@ -11,7 +11,7 @@
 // Gambar masuk
 $i1 = @imagecreatefromstring(file_get_contents($argv1));
 $i2 = @imagecreatefromstring(file_get_contents($argv2));
- 
+
 // cek gambar
 if (!$i1) {
     echo $argv1 . ' is not a valid image';
@@ -74,6 +74,6 @@ if (!$different_pixels) {
 // menampilkan hasil
 ?>
 
-<img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' >
-<img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' >
+<img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
+<img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>
 <img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

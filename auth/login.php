@@ -17,9 +17,9 @@
         if(($_SESSION['role']) == 'admin' ) {
             header('Location: /TA/admin.php');
         } else if(($_SESSION['role']) == 'Expert' ) {
-            header('Location: /TA/trialz.html');
+            header('Location: /TA/trialz.php');
         } else if(($_SESSION['role'])== 'Doctor')
-		    header('Location: /TA/trialzUser.html');
+		    header('Location: /TA/trialzUser.php');
         }
     else {
 		header('Location: /TA/login.php');

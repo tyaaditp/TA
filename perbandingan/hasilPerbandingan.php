@@ -24,6 +24,9 @@ $sql2 = mysqli_query($link, $query);
     tbody tr:nth-child(even){
         background-color: #f2f2f2;
     }
+    td{
+        text-align: center;
+    }
 </style>
 <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>
 

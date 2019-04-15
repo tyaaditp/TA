@@ -69,7 +69,7 @@ if (!$different_pixels) {
     echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
-    echo '<h4 style="text-align:center; font-family: sans-serif;">' Result '</h4>';
+    echo "<h4 style="text-align:center; font-family: sans-serif;"> Result </h4>";
     echo "$different_pixels/$total same pixels, or ", number_format(100-(100 * $different_pixels / $total), 2), '%';
 }
 // menampilkan hasil

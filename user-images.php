@@ -1,4 +1,5 @@
 <?php
+session_start();
 $host 		= "localhost";
 $username	= "root";
 $password	= "";
@@ -6,7 +7,7 @@ $dbname		= "TA_anotasi";
 
 $link = mysqli_connect($host, $username, $password, $dbname)
 or die("Salah server, nama pengguna, atau passwordnya!"); 
-$user_id = $_SESSION 
+$user_id = $_POST['user_id'];
 
 $sql2 = mysqli_query($link, "SELECT image FROM image_original WHERE user_id='".$user_id."'");
 if(mysqli_num_rows($sql2)>0) {

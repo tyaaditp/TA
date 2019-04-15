@@ -1,3 +1,15 @@
+<style>
+    .hasil{
+        width: 25%;
+    }
+    p{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+</style>
+
 <?php
 
 // Direktori gambar
@@ -75,7 +87,7 @@ if (!$different_pixels) {
     $similari = number_format(100-(100 * $sim), 2);
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$different_pixels/$total.' same pixels, or '.number_format(100-(100 * $different_pixels / $total), 2).' % </textarea></p>" ;
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
-    echo "<p><textarea> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
+    echo "<p><textarea class=\"hasil\"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
     echo "<br>";
     echo "<br>";
 }

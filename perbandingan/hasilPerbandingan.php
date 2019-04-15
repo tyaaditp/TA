@@ -9,10 +9,17 @@ $sql2 = mysqli_query($link, $query);
 ?>
 
 <style>
-    
+    table{
+        border: 1px solid black;
+    }
+    thead{
+        font-family: sans-serif;
+        background-color: #efb523;
+    }
 </style>
 <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>
 <a href="#"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>
+
 <table border=1> 
 <thead>
     <tr>

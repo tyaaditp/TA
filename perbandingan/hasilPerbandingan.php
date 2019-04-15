@@ -11,10 +11,18 @@ $sql2 = mysqli_query($link, $query);
 <style>
     table{
         border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
     }
     thead{
         font-family: sans-serif;
         background-color: #efb523;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    tbody tr:nth-child(even){
+        background-color: #f2f2f2;
     }
 </style>
 <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>

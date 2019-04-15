@@ -76,4 +76,3 @@ if (!$different_pixels) {
 
 <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
 <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

@@ -57,14 +57,15 @@ if(mysqli_num_rows($sql2)>0) {
             //var_dump($row2);
             echo '<tr>';
             echo '<td>' . $row2['anotated_user_id'] . '</td>'; 
-            echo '<td> <img widht=40 src="'  . $row2['original_image'] . '" ></td>'; 
-            echo '<td>' . $row2['anotated_image'] . '</td>'; 
+            echo '<td> <img width=200 src="'  . $row2['original_image'] . '" ></td>';
+            echo '<td> <img width=200 src="'  .$row2['anotated_image'] . '" ></td>'; 
+            
             $querySelectFirstAnotated = 'select * from image_anotated where image_id='.$row2['anotated_reference'].' and user_id='.$row2['original_user_id'].' limit 1';
             //echo $querySelectFirstAnotated;
             $sql3 = mysqli_query($link, $querySelectFirstAnotated);
             if(mysqli_num_rows($sql3) == 1) {
                 $rowOfFirstAnotated = mysqli_fetch_array($sql3);
-                echo '<td>' . $rowOfFirstAnotated['image'] . '</td>';
+                echo '<td> <img width=200 src="'  . $rowOfFirstAnotated['image'] . '" ></td>';
                 $image1 = substr($rowOfFirstAnotated['image'], 3);
                 $image2 = substr($row2['anotated_image'], 3);
                 echo '<td> <a href="/TA/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2.'"> Link Perbandingan </a></td>'; 

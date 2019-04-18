@@ -1,3 +1,4 @@
+//halo assalamu'alaikum
 function render() {
 
     if ( _via_display_area_content_name !== VIA_DISPLAY_AREA_CONTENT_NAME['IMAGE'] ) {

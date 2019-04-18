@@ -50,7 +50,6 @@ session_start();
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/TA/logout.php" tabindex="-1">Logout</a>
-
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">

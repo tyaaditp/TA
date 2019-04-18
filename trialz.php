@@ -80,7 +80,7 @@ session_start();
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
-              <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
+              <li data-target="#analisisdokterahli" data-toggle="modal">Add Analysis</li>
               <li  title="Compare the image to check similarity"> <a href= "/TA/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
           </li>
@@ -243,12 +243,12 @@ session_start();
         </div>
         <!-- comment: analysis from doctor -->
         
-        <div class="modal" id="analisisdokter" tabindex="-1">
+        <div class="modal" id="analisisdokterahli" tabindex="-1">
           <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-warning">
               <div class="modal-header">
-                <button class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Analysis : </h4>
+                <button class="close pull-right" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">
                 <form action="">
@@ -259,8 +259,8 @@ session_start();
                 </form>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary">Submit</button>
-                <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-dark">Submit</button>
+                <button class="btn btn-dark" data-dismiss="modal">Cancel</button>
               </div>
             </div>
           </div>

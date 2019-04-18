@@ -36,6 +36,7 @@
         display: inline-block;
         padding: 0.3rem;
       }
+
       .similarity {
         display: inline-block;
         padding: 0.5rem;
@@ -43,7 +44,7 @@
 
       /* Middle panel: containing #image_panel, #leftsidebar */
       .middle_panel { display:table; table-layout:fixed; width:100%; z-index:1; padding:0;}
-      #leftsidebar { display:none; z-index:10; vertical-align:top;}
+      #leftsidebar {display:none; z-index:10; vertical-align:top;}
       #display_area { display:table-cell; width:100%; z-index:1; margin:0; padding-top: 3.5em; padding-left:1em; vertical-align:top; }
       /* layers of canvas */
       #image_panel        { position:relative; outline:none;}

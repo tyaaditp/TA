@@ -189,6 +189,13 @@ session_start();
       </div>
 
       <div id="leftsidebar">
+        <div class="comment">
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <input type="Submit" name="submit" id="submit">
+          </div>
+        </div>
         <div class="leftsidebar_accordion_panel" style="float:right; border:2px solid #f2f2f2;">
           <span class="text_button" onclick="leftsidebar_decrease_width()" title="Reduce width of this toolbar panel">&larr;</span>
           <span class="text_button" onclick="leftsidebar_increase_width()" title="Increase width of this toolbar panel">&rarr;</span>
@@ -228,7 +235,8 @@ session_start();
 
         <!-- Attributes -->
 
-	</div> <!-- end of leftsidebar -->
+	    </div> 
+      <!-- end of leftsidebar -->
 
       <!-- Main display area: contains image canvas, ... -->
       <div id="display_area">

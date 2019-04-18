@@ -80,6 +80,7 @@ session_start();
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
+              <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
               <li  title="Compare the image to check similarity"> <a href= "/TA/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
           </li>
@@ -241,10 +242,28 @@ session_start();
             <!-- here, a child div with id="annotation_editor" is added by javascript -->
         </div>
         <!-- comment: analysis from doctor -->
-        <div class="form-group pt-3 fixed-bottom mx-2">
-          <label for="comment" style="font-size:1.5em;">Analysis : </label>
-          <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Analysis Here"></textarea>
-          <input type="Submit" name="submit" id="submit" class="mt-1 text-center" style="background-color: #ffdb58;  height: 30px;">
+        
+        <div class="modal" id="analisisdokter" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Analysis : </h4>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Write your analysis here:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div id="image_grid_panel" class="display_area_content display_none">

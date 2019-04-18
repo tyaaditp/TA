@@ -189,7 +189,7 @@ session_start();
       </div>
 
       <div id="leftsidebar">
-          <div class="form-group">
+          <div class="form-group ">
             <label for="comment">Comment:</label>
             <textarea class="form-control" rows="5" id="comment"></textarea>
             <input type="Submit" name="submit" id="submit">

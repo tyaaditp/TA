@@ -257,7 +257,7 @@ var _via_settings = {};
 _via_settings.ui  = {};
 _via_settings.ui.annotation_editor_height   = 25; // in percent of the height of browser window
 _via_settings.ui.annotation_editor_fontsize = 0.8;// in rem
-_via_settings.ui.leftsidebar_width          = 0;  // in rem
+_via_settings.ui.leftsidebar_width          = 18;  // in rem
 
 _via_settings.ui.image_grid = {};
 _via_settings.ui.image_grid.img_height          = 80;  // in pixel

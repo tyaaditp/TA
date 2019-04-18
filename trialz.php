@@ -242,10 +242,11 @@ session_start();
         </div>
         <!-- comment: analysis from doctor -->
         <div class="form-group pt-3 fixed-bottom mx-2">
-            <label for="comment" style="font-size:1.5em;">Analysis : </label>
-            <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Analysis Here"></textarea>
-            <input type="Submit" name="submit" id="submit" class="mt-1 text-center" style="background-color: #ffdb58;  height: 30px;">
+          <label for="comment" style="font-size:1.5em;">Analysis : </label>
+          <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Analysis Here"></textarea>
+          <input type="Submit" name="submit" id="submit" class="mt-1 text-center" style="background-color: #ffdb58;  height: 30px;">
         </div>
+        
         <div id="image_grid_panel" class="display_area_content display_none">
 
           <div id="image_grid_group_panel">
@@ -520,7 +521,7 @@ POSSIBILITY OF SUCH DAMAGE.
         </div>
       </div> <!-- end of display_area -->
     </div> <!-- end of middle_panel -->
-
+    
     <!-- this vertical spacer is needed to allow scrollbar to show
          items like Keyboard Shortcut hidden under the attributes panel -->
     <div style="width: 100%;" id="vertical_space"></div>

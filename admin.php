@@ -35,17 +35,18 @@ session_start();
 <body>
 
  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
-    <div class="logo"><img src="minilogo.png" alt="minilogo optan" style="width:70px;"></div>
+    
     <div class="container" style="margin: 0px 5px;">
         <!-- <a class="navbar-brand font-weight-bold page-scroll" href="#home" style="font-size:150%">OPTAN</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!-- <div class="logo"><img src="minilogo.png" alt="minilogo optan" style="width:70px;"></div> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 120%;">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
+                    <!-- <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a> -->
+                    <img src="minilogo.png" alt="minilogo optan" style="width:70px;">
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/TA/logout.php" tabindex="-1">Logout</a>
@@ -94,10 +95,42 @@ $conn->close();
         </table>
     </div>
     <div>
-        <a class="btn btn-warning btn-sm mt-4" href="UserRegister.html">Add New Data</a>
+        <a class="btn btn-warning btn-sm mt-4" data-target="#addDataUser" data-toggle="modal">Add New Data</a>
+        <!-- <a class="btn btn-warning btn-sm mt-4" href="UserRegister.html">Add New Data</a> -->
     </div>
  </section>
 
+    <!-- form add new data user -->
+    <div class="modal" id="addDataUser" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+          <center>
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color:beige;">ADD NEW USER DATA</h4>
+              <button class="close pull-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="connectToDatabase.php">
+                    <input type="text" name="nama" placeholder="Name" class="text-center"><br><br>
+                    <input type="email" name="email" placeholder="Email Address" class="text-center"><br><br>
+                    <input type="text" name="username" placeholder="Username" class="text-center"><br><br>
+                    <input type="password" name="password" placeholder="Password" class="text-center"><br><br>
+                    <!-- <input type="text" name="role" placeholder="User Role"><br><br> -->
+                    <div class="form-group">
+                        <select name="role" placeholder="Select Role">
+                            <option class="disabled">Select Role</option>
+                            <option>Expert</option>
+                            <option>Doctor</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Submit" class="submit"> 
+                    <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
+                </form>
+            </div>
+          </div>
+          </center>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white fixed-bottom">

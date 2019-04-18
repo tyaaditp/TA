@@ -189,12 +189,6 @@ session_start();
       </div>
 
       <div id="leftsidebar">
-          <div class="form-group ">
-            <label for="comment">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-            <input type="Submit" name="submit" id="submit">
-          </div>
-        
         <div class="leftsidebar_accordion_panel" style="float:right; border:2px solid #f2f2f2;">
           <span class="text_button" onclick="leftsidebar_decrease_width()" title="Reduce width of this toolbar panel">&larr;</span>
           <span class="text_button" onclick="leftsidebar_increase_width()" title="Increase width of this toolbar panel">&rarr;</span>
@@ -245,6 +239,12 @@ session_start();
           <!-- @todo: in future versions, this canvas will be replaced by a <svg> element -->
             <canvas id="region_canvas" width="1" height="1" tabindex="1">Sorry, your browser does not support HTML5 Canvas functionality which is required for this application.</canvas>
             <!-- here, a child div with id="annotation_editor" is added by javascript -->
+        </div>
+        <!-- comment: analysis from doctor -->
+        <div class="form-group pt-3 fixed-bottom mx-2">
+            <label for="comment" style="font-size:1.5em;">Analysis : </label>
+            <textarea class="form-control" rows="5" id="comment" placeholder="Write Your Analysis Here"></textarea>
+            <input type="Submit" name="submit" id="submit" class="mt-1 text-center" style="background-color: #ffdb58;  height: 30px;">
         </div>
         <div id="image_grid_panel" class="display_area_content display_none">
 

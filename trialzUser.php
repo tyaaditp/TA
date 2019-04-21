@@ -77,6 +77,7 @@ session_start();
               <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
+              <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
               <li  title="Compare the image to check similarity"> <a href= "/TA/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
           </li>
@@ -237,6 +238,31 @@ session_start();
             <canvas id="region_canvas" width="1" height="1" tabindex="1">Sorry, your browser does not support HTML5 Canvas functionality which is required for this application.</canvas>
             <!-- here, a child div with id="annotation_editor" is added by javascript -->
         </div>
+
+        <!-- comment: user's analysis -->
+        <div class="modal" id="analisisdokter" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content bg-warning">
+                <div class="modal-header">
+                  <h4 class="modal-title">Analysis : </h4>
+                  <button class="close pull-right" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Write your analysis here:</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-dark">Submit</button>
+                  <button class="btn btn-dark" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div id="image_grid_panel" class="display_area_content display_none">
 
           <div id="image_grid_group_panel">

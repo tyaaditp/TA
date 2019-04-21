@@ -17,11 +17,6 @@
         #project{
             background-color: rgb(224, 224, 224);
         }
-        hr{
-                width: 250px;
-                margin-top: 0px !important;
-        }
-
     </style>
 
     <title>OPTAN</title>
@@ -73,10 +68,8 @@
             <!-- <h1 class="display-4">OPTAN</h1> -->
             <p class="lead">Online Annotation Tools</p>
             <br>
-            <!-- <a class="btn btn-outline-warning text-center" href="login.php" role="button" style="width: 20%; height:40px;">Login</a><br> -->
-            <!-- <a class="btn btn-outline-warning text-center mt-2" href="RegisterAdmin.html" role="button" style="width: 20%; height:40px; ">Register</a> -->
-            <a class="btn btn-outline-warning text-center" data-target="#loginForm" data-toggle="modal" role="button" style="width: 20%; height:40px;">Login</a><br>
-            <a class="btn btn-outline-warning text-center mt-2" data-target="#registerForm" data-toggle="modal" role="button" style="width: 20%; height:40px; ">Register</a>
+            <a class="btn btn-outline-warning text-center" href="login.php" role="button" style="width: 20%; height:40px;">Login</a><br>
+            <a class="btn btn-outline-warning text-center mt-2" href="RegisterAdmin.html" role="button" style="width: 20%; height:40px;">Register</a>
         </div>
     </div>
 
@@ -127,53 +120,6 @@
         </div>
     </section>
 
-    <!-- form login -->
-
-    <div class="modal" id="loginForm" tabindex="-1" data-backdrop="static">
-        <div class="modal-dialog modal-sm">
-          <center>
-          <div class="modal-content bg-dark">
-            <div class="modal-header">
-              <h4 class="modal-title" style="color:beige;">OPTAN LOGIN FORM</h4>
-              <button class="close pull-right" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <form action="/TA/auth/login.php" method="POST">
-                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
-                <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
-                <input type="Submit" name="submit" id="submit">
-                <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
-              </form>
-            </div>
-          </div>
-          </center>
-        </div>
-    </div>
-
-    <!-- form register admin -->
-    <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">
-        <div class="modal-dialog">
-          <center>
-          <div class="modal-content bg-dark">
-            <div class="modal-header">
-              <h4 class="modal-title" style="color:beige;">OPTAN REGISTER FORM</h4>
-              <button class="close pull-right" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <form action="/TA/auth/register.php" method="POST" class="text-center">
-                <input type="text" name="name" class="text text-center" autocomplete="off" required placeholder="Name"><br><br>
-                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="Username"><br><br>
-                <input type="password" name="password" class="text text-center" required placeholder="Password"><br><br>
-                <input type="email" class="text text-center" id="inputEmail" name="email" required placeholder="Email Address"><br><br>
-                <input type="Submit" name="submit" id="submit">
-                <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
-              </form>
-            </div>
-          </div>
-          </center>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="bg-dark text-white">
         <div class="container text-center">
@@ -196,3 +142,12 @@
     <script src="js/script.js"></script>
   </body>
 </html>
+
+
+
+
+                <form action="/TA/auth/login.php" method="POST">
+                    <input type="text" name="username" class="text" autocomplete="off" required placeholder="username"><br><hr><br>
+                    <input type="password" name="password" class="text" required placeholder="password"><br><hr><br>
+                    <input type="Submit" name="submit" id="submit">
+                </form>

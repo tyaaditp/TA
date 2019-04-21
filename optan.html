@@ -17,6 +17,11 @@
         #project{
             background-color: rgb(224, 224, 224);
         }
+        hr{
+                width: 250px;
+                margin-top: 0px !important;
+        }
+
     </style>
 
     <title>OPTAN</title>
@@ -68,8 +73,10 @@
             <!-- <h1 class="display-4">OPTAN</h1> -->
             <p class="lead">Online Annotation Tools</p>
             <br>
-            <a class="btn btn-outline-warning text-center" href="login.php" role="button" style="width: 20%; height:40px;">Login</a><br>
-            <a class="btn btn-outline-warning text-center mt-2" href="RegisterAdmin.html" role="button" style="width: 20%; height:40px;">Register</a>
+            <!-- <a class="btn btn-outline-warning text-center" href="login.php" role="button" style="width: 20%; height:40px;">Login</a><br> -->
+            <!-- <a class="btn btn-outline-warning text-center mt-2" href="RegisterAdmin.html" role="button" style="width: 20%; height:40px; ">Register</a> -->
+            <a class="btn btn-outline-warning text-center" data-target="#loginForm" data-toggle="modal" role="button" style="width: 20%; height:40px; color:#464E51;">Login</a><br>
+            <a class="btn btn-outline-warning text-center mt-2" data-target="#registerForm" data-toggle="modal" role="button" style="width: 20%; height:40px; color:#464E51;">Register</a>
         </div>
     </div>
 
@@ -83,12 +90,6 @@
             </div>
             <div class="row justify-content-center">
                 <p style="text-align:center;">OPTAN adalah platform anotasi online yang dapat digunakan sebagai media pembelajaran diagnosis fitur-fitur pada retina. <br> OPTAN dilengkapi dengan fitur untuk menilai kemiripan hasil anotasi dengan referensi yang dipilih.</p>
-                <!-- <div class="col-md-5">
-                    <p> Optan adalah aplikasi blalalal</p>
-                </div>
-                <div class="col-md-5">
-                    <p>aplikasi ini berguna untuk blalalalal</p>
-                </div> -->
             </div>
         </div>
     </section>
@@ -99,7 +100,7 @@
             <div class="row py-5">
                 <div class="col-md text-center">
                     <h2>Let's Try OPTAN Annotator !</h2><br>
-                    <a href="RegisterAdmin.html"><button type="button" class="btn btn-lg btn-warning mt-4">Register Now</button></a>
+                    <a data-target="#registerForm" data-toggle="modal"><button type="button" class="btn btn-lg btn-warning mt-4">Register Now</button></a>
                 </div>
             </div>
         </div>
@@ -125,6 +126,53 @@
             </div>
         </div>
     </section>
+
+    <!-- form login -->
+
+    <div class="modal" id="loginForm" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+          <center>
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color:beige;">OPTAN LOGIN FORM</h4>
+              <button class="close pull-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="/TA/auth/login.php" method="POST">
+                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
+                <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
+                <input type="Submit" name="submit" id="submit">
+                <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
+              </form>
+            </div>
+          </div>
+          </center>
+        </div>
+    </div>
+
+    <!-- form register admin -->
+    <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog">
+          <center>
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color:beige;">OPTAN REGISTER FORM</h4>
+              <button class="close pull-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="/TA/auth/register.php" method="POST" class="text-center">
+                <input type="text" name="name" class="text text-center" autocomplete="off" required placeholder="Name"><br><br>
+                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="Username"><br><br>
+                <input type="password" name="password" class="text text-center" required placeholder="Password"><br><br>
+                <input type="email" class="text text-center" id="inputEmail" name="email" required placeholder="Email Address"><br><br>
+                <input type="Submit" name="submit" id="submit">
+                <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
+              </form>
+            </div>
+          </div>
+          </center>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white">

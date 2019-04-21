@@ -5299,10 +5299,10 @@ function setup_user_input_panel(ok_handler, input, config, cancel_handler) {
   c.setAttribute('class', 'content');
   var html = [];
   html.push('<p class="title">' + config.title + '</p>');
-  html.push('<div id="user_list"></div>');
+  html.push('<button onclick="loadUser()" style="width:25%; margin:auto; display:inline;"> Choose Doctor </button>');
+  html.push('<div id="user_list" style="display:inline;"></div>');
+  html.push('<button onclick="loadImages()" style="width:25%; margin:auto; display:inline;"> Load Images </button>');
   html.push('<div id="user_images"></div>');
-  html.push('<button onclick="loadUser()"> Chose Doctor </button>');
-  html.push('<button onclick="loadImages()"> Load Images </button>');
   html.push('<div class="user_inputs">');
   var key;
   for ( key in _via_user_input_data ) {

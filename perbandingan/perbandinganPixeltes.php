@@ -2,10 +2,9 @@
 
 // Direktori gambar
  $gambar = dirname(__DIR__);
- echo $gambar;
 
- $argv1 = $gambar . '/uploads/cek.jpg';
- $argv2 = $gambar . '/uploads/cek1.jpg';
+ $argv1 = $gambar . '/uploads/ano-pratama.jpeg';
+ $argv2 = $gambar . '/uploads/ano-gan.jpeg';
  $argv3 = $gambar .  '/uploads/hasil';
  
 // Gambar masuk
@@ -50,7 +49,7 @@ for ($x = 0; $x < $sx1; $x++) {
         $rgb2 = imagecolorat($i2, $x, $y);
         $pix2 = imagecolorsforindex($i2, $rgb2);
  
-        if ($pix1 !== $pix2) { // different pixel
+        if ($pix1 !== $pix2) { // different pixel (dibuat range jangan sama persis)
             // increment and paint in the diff image
             $different_pixels++;
             imagesetpixel($diffi, $x, $y, $green);
@@ -58,7 +57,14 @@ for ($x = 0; $x < $sx1; $x++) {
  
     }
 }
- 
+ foreach ($pix1 as $item) {
+    echo $item;
+}
+
+echo join(', ', $pix1);
+
+array_walk($pix1, create_function('$a', 'echo $a;'));
+
  
 if (!$different_pixels) {
     echo "100%";
@@ -69,7 +75,7 @@ if (!$different_pixels) {
     echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
-    echo "$different_pixels/$total same pixels, or ", number_format(100-(100 * $different_pixels / $total), 2), '%';
+    echo "same pixels : $different_pixels/$total same pixels :", number_format(100-(100 * $different_pixels / $total), 2), '%';
 }
 // menampilkan hasil
 ?>

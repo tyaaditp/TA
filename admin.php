@@ -43,15 +43,19 @@ session_start();
         </button>
         <!-- <div class="logo"><img src="minilogo.png" alt="minilogo optan" style="width:70px;"></div> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 120%;">
-            <ul class="navbar-nav mr-auto">
+            <!-- <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <!-- <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a> -->
+                    <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
                     <img src="minilogo.png" alt="minilogo optan" style="width:70px;">
                 </li>
-                <li class="nav-item">
+                <li class="nav-item float-right">
                     <a class="nav-link" href="/TA/logout.php" tabindex="-1">Logout</a>
                 </li>
-            </ul>
+            </ul> -->
+            <div class="navbar-nav mr-auto" style="height:50px;">
+                <img src="minilogo.png" alt="minilogo optan" style="width:70px;" class="nav-item active">
+                <a class="nav-link pull-right" href="/TA/logout.php" tabindex="-1">Logout</a>
+            </div>
             <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>

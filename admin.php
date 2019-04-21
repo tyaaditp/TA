@@ -42,14 +42,13 @@ session_start();
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- <div class="logo"><img src="minilogo.png" alt="minilogo optan" style="width:70px;"></div> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 120%;">
-            <ul class="navbar-nav">
-                <li class="nav-item active mr-auto">
-                    <a class="nav-link page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
-                    <img src="minilogo.png" alt="minilogo optan" style="width:70px;">
-                </li>
-                <li class="nav-item ml-auto">
-                    <a class="nav-link" href="/TA/logout.php" tabindex="-1">Logout</a>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent" style="font-size: 100%;">
+            <ul class="navbar-nav mr-auto" style="height:50px;">
+                <img src="minilogo.png" alt="minilogo optan" style="width:100px; height:60px;">
+            </ul>
+            <ul class="navbar-nav ml-auto" style="height:50px;">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm btn-outline-secondary" href="/TA/logout.php" tabindex="-1"><b>Logout</b></a>
                 </li>
             </ul>
             <!-- <div class="navbar-nav mr-auto" style="height:50px;">

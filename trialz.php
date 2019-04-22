@@ -99,6 +99,12 @@ session_start();
             </ul>
           </li>
 
+          <li class="nav-item active">User guide
+            <ul>
+              <a href="User_Guide_Expert.pdf" download>Download User Guide</a>
+            </ul>
+          </li>
+
           <!--<li>Help
             <ul>
               <li onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_GETTING_STARTED)" title="Show a guide to get started with this application">Getting Started</li>

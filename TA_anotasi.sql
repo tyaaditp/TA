@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 09, 2019 at 04:38 PM
+-- Generation Time: Apr 10, 2019 at 05:20 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -42,7 +42,27 @@ CREATE TABLE `image_anotated` (
 INSERT INTO `image_anotated` (`id`, `user_id`, `image_id`, `image`) VALUES
 (2, 24, 31, '/TA/uploads/ano-adit-417'),
 (3, 24, 32, '/TA/uploads/ano-adit-2'),
-(4, 24, 33, '/TA/uploads/ano-adit-147');
+(4, 24, 33, '/TA/uploads/ano-adit-147'),
+(5, 22, 34, '/TA/uploads/ano-tama-492'),
+(6, 23, 34, '/TA/upload/ano-balablbala'),
+(7, 8, 34, '/TA/uploads/ano-asdas'),
+(9, 22, 33, '/TA/uploads/ano-tama-644'),
+(10, 22, 33, '/TA/uploads/ano-tama-13'),
+(11, 26, 35, '/TA/uploads/ano-azrul-614'),
+(12, 27, 35, '/TA/uploads/ano-dimas-670'),
+(13, 26, 35, '/TA/uploads/ano-azrul-150'),
+(14, 26, 36, '/TA/uploads/ano-azrul-569'),
+(15, 27, 36, '/TA/uploads/ano-dimas-753'),
+(16, 26, 37, '/TA/uploads/ano-azrul-138'),
+(17, 27, 37, '/TA/uploads/ano-dimas-565'),
+(18, 28, 36, '/TA/uploads/ano-con-308'),
+(19, 28, 36, '/TA/uploads/ano-con-556'),
+(20, 26, 38, '/TA/uploads/ori-azrul-cek'),
+(21, 27, 38, '/TA/uploads/ano-dimas-592'),
+(22, 27, 38, '/TA/uploads/ano-dimas-665'),
+(23, 26, 39, '/TA/uploads/ano-azrul-364'),
+(24, 26, 40, '/TA/uploads/ano-azrul-237'),
+(25, 26, 41, '/TA/uploads/ano-azrul-934');
 
 -- --------------------------------------------------------
 
@@ -90,7 +110,15 @@ INSERT INTO `image_original` (`id`, `user_id`, `image`) VALUES
 (30, 24, '/TA/uploads/ori-adit-693'),
 (31, 24, '/TA/uploads/ori-adit-305'),
 (32, 24, '/TA/uploads/ori-adit-990'),
-(33, 24, '/TA/uploads/ori-adit-265');
+(33, 24, '/TA/uploads/ori-adit-265'),
+(34, 22, '/TA/uploads/ori-tama-503'),
+(35, 26, '/TA/uploads/ori-azrul-977'),
+(36, 26, '/TA/uploads/ori-azrul-315'),
+(37, 26, '/TA/uploads/ori-azrul-407'),
+(38, 26, '/TA/uploads/ori-azrul-cek'),
+(39, 26, '/TA/uploads/ori-azrul-129'),
+(40, 26, '/TA/uploads/ori-azrul-362'),
+(41, 26, '/TA/uploads/ori-azrul-718');
 
 -- --------------------------------------------------------
 
@@ -134,9 +162,13 @@ INSERT INTO `user` (`id`, `parent_id`, `nama`, `email`, `username`, `password`, 
 (19, 0, 'awdaw', 'dawd@waf.vm', 'wadaw', 'wdad', 'Expert', 0),
 (20, 0, 'dawdw', 'dawdw@dawd.cm', 'wadwa1', 'dawdw', 'Student', 0),
 (21, 0, 'rt', 'ww@s', 'w', 'w', 'Expert', 0),
-(22, 8, 'rt', 'ww@s', 'w', 'w', 'Expert', 0),
-(23, 8, 'wd', 'ww@s', 'wawd', 'awd', 'Student', 0),
-(24, 8, 'adit', 'adit@gm', 'adit', 'root', 'Expert', 0);
+(22, 8, 'rt', 'ww@s', 'tama', 'tama', 'Expert', 0),
+(23, 8, 'wd', 'ww@s', 'wawd', 'awd', 'Expert', 0),
+(24, 8, 'adit', 'adit@gm', 'adit', 'root', 'Expert', 0),
+(25, 0, 'helmi', 'hel@go.id', 'helmi', 'root', 'admin', 0),
+(26, 25, 'azrul', 'az@go.id', 'azrul', 'root', 'Expert', 0),
+(27, 25, 'dimas', 'dim@go.id', 'dimas', 'root', 'Expert', 0),
+(28, 25, 'con', 'con@go.id', 'con', 'root', 'Doctor', 0);
 
 --
 -- Indexes for dumped tables
@@ -171,19 +203,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `image_anotated`
 --
 ALTER TABLE `image_anotated`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `image_original`
 --
 ALTER TABLE `image_original`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables

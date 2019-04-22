@@ -22,6 +22,7 @@
 		    header('Location: /TA/trialzUser.php');
         }
     else {
-		header('Location: /TA/login.php');
+		alert('Your username or password wrong!');	
+	    //header('Location: /TA/login.php');
 	}
 ?>

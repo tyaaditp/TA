@@ -446,21 +446,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	position: relative;
 }
 
-/* .feature + .feature  {
-	margin-top:40px;
-} */
 
 .feature .feature-icon {
 	position:absolute;
 	left:0;
 	top:0;
-	width:80px;
-	height:80px;
+	width:100px;
+	height:100px;
 	line-height:80px;
 	text-align:center;
 	border-radius: 50%;
 	font-size:30px;
-	border:1px solid #EBEBEB;
+	/* border:1px solid #EBEBEB; */
+	border:1px solid rgb(255, 255, 255);
 	color:#FF6700;
 }
 

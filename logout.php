@@ -4,5 +4,5 @@
     unset($_SESSION['role']);
     unset($_SESSION['id']);
     unset($_SESSION['username']);
-	header("location:optan.html");
+	header("location:optan.php");
 ?>

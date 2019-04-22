@@ -13,8 +13,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="optancss.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
-
   </head>
 
   <body onload="_via_init()" onresize="_via_update_ui_components()">
@@ -95,6 +93,12 @@ session_start();
               <li class="submenu_divider"></li> -->
               <li onclick="toggle_region_boundary_visibility()" title="Show or hide the region boundaries">Show/hide region boundaries (b)</li>
               <li onclick="toggle_region_id_visibility()" title="Show or hide the region id labels">Show/hide region labels (l)</li>
+            </ul>
+          </li>
+
+          <li class="nav-item active">User guide
+            <ul>
+              <a href="User_Guide.pdf" download>Download User Guide</a>
             </ul>
           </li>
 

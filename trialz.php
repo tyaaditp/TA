@@ -54,7 +54,7 @@ session_start();
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
               <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
-              <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
+              <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Annotation Only</li> <!-- (as a JSON file)-->
               <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
               <!-- <li class="submenu_divider"></li> -->
               <li class="submenu_divider"></li>

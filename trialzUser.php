@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" type="text/css" href="optancss.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+
   </head>
 
   <body onload="_via_init()" onresize="_via_update_ui_components()">
@@ -51,7 +53,7 @@ session_start();
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
               <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
-              <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Anotation Only</li> <!-- (as a JSON file)-->
+              <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Annotation Only</li> <!-- (as a JSON file)-->
               <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
               <!-- <li class="submenu_divider"></li> -->
               <!-- <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li> -->

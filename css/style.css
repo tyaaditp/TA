@@ -443,12 +443,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 \*------------------------------------*/
 /* -- Feature -- */
 .feature {
-	position:relative;
+	position: relative;
 }
 
-.feature + .feature  {
+/* .feature + .feature  {
 	margin-top:40px;
-}
+} */
 
 .feature .feature-icon {
 	position:absolute;

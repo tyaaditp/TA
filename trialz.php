@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Trial page</title>
+    <title>Annotation Page|OPTAN</title>
     <meta name="author" content="TA-L">
     <meta name="description" content="Optan is a standalone image annotator application">
 

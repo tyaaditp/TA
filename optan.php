@@ -160,7 +160,9 @@
         <div class="modal-dialog modal-sm">
 					<div class="modal-content bg-light">
 						<div class="modal-body">
+						
 							<p>Your username or password may wrong !</p>
+
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
@@ -258,6 +260,22 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<!-- <script>
+				$.ajax({  
+                     url:"login.php",  
+                     method:"POST",  
+                     data: {username:username, password:password},  
+                     success:function(data)  
+                     {  
+                          //alert(data);  
+                          if(data == 'No')  
+                          {  
+                               alert("Wrong Data");  
+                          }    
+                     }  
+                }); 
+		</script> -->
+
 
 	</body>
 </html>

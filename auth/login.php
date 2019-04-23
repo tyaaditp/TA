@@ -25,10 +25,28 @@
 		echo "<script type='text/javascript'>
 				alert('Your username or password may wrong!');
 			</script>";
-		echo "<script type='text/javascript'>location.reload();</script>";
-		
+		// echo "<script type='text/javascript'>
+		// 	setInterval(function() {
+		// 		if (confirm('Your username or password may wrong !')) {
+		// 			window.location.href = "/optan.php";
+		// 		}
+		// 	}, 3000);
+		// 	</script>";
 		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
 		// header('Location: /TA/optan.php');
-		// $('#loginFailed').modal('show');
+		// echo "<script type='text/javascript'>$('#loginFailed').modal('show');</script>";
+	// 	echo "<script type='text/javascript'>
+	// 	$.ajax({  
+			  
+	// 		data: {username:username, password:password},  
+	// 		success:function(data)  
+	// 		{  
+				   
+	// 				  alert('Wrong Data');  
+				     
+	// 		}  
+	//    }); 
+	// 	</script>";
+		
 	}
 ?>

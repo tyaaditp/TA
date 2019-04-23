@@ -225,7 +225,7 @@
 					<!-- copyright -->
 					<div class="col-md-8 col-md-pull-4">
 							<div class="footer-copyright">
-								<span>&copy; Copyright 2019. All Rights Reserved. | TA.1819.1.1.L</a></span>
+								<span>&copy; Copyright 2019. All Rights Reserved. | TA.1819.1.1.L BME ITB</a></span>
 							</div>
 						</div>
 						<!-- /copyright -->

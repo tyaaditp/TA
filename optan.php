@@ -154,6 +154,21 @@
           </center>
         </div>
     </div>
+			
+		<!-- login failed alert -->
+		<div class="modal" id="loginFailed" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+					<div class="modal-content bg-light">
+						<div class="modal-body">
+							<p>Your username or password may wrong !</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+						</div>
+					</div>
+				</div>
+		</div>
+
 
     <!-- form register admin -->
     <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">

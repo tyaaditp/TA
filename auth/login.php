@@ -21,8 +21,10 @@
         } else if(($_SESSION['role'])== 'Doctor')
 		    header('Location: /TA/trialzUser.php');
         }
-    else {
-		alert('Your username or password wrong!');	
-	    //header('Location: /TA/login.php');
+    else {	
+		// echo "<script type='text/javascript'>alert('Your username or password may wrong!')</script>";
+		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
+		// header('Location: /TA/optan.php');
+		$('#loginFailed').modal('show');
 	}
 ?>

@@ -156,7 +156,7 @@
     </div>
 			
 		<!-- login failed alert -->
-		<div class="modal" id="loginFailed" tabindex="-1" data-backdrop="static">
+		<!-- <div class="modal" id="loginFailed" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog modal-sm">
 					<div class="modal-content bg-light">
 						<div class="modal-body">
@@ -167,7 +167,7 @@
 						</div>
 					</div>
 				</div>
-		</div>
+		</div> -->
 
 
     <!-- form register admin -->

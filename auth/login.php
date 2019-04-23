@@ -22,9 +22,13 @@
 		    header('Location: /TA/trialzUser.php');
         }
     else {	
-		// echo "<script type='text/javascript'>alert('Your username or password may wrong!')</script>";
+		echo "<script type='text/javascript'>
+				alert('Your username or password may wrong!');
+			</script>";
+		echo "<script type='text/javascript'>location.reload();</script>";
+		
 		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
 		// header('Location: /TA/optan.php');
-		$('#loginFailed').modal('show');
+		// $('#loginFailed').modal('show');
 	}
 ?>

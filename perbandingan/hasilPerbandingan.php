@@ -3,7 +3,7 @@ session_start();
 require('../config.php');
 
 $user_id = $_SESSION['id'];
-$query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image' from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_anotated.user_id = " . $user_id;
+$query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image', image_anotated.analisis as 'anotated_analisis'  from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_anotated.user_id = " . $user_id;
 $sql2 = mysqli_query($link, $query);
 
 ?>
@@ -42,11 +42,11 @@ $sql2 = mysqli_query($link, $query);
 <table border=1> 
 <thead>
     <tr>
-        <td> user id </td>
-        <td> image original </td>
-        <td> image anotated </td>
-        <td> image anotated reference </td>
-        <td> link </td>
+        <!-- <td> User id </td> -->
+        <td> Image original </td>
+        <td> Image anotated </td>
+        <td> Image anotated reference </td>
+        <td> Result </td>
     </tr>
 </thead>
 <tbody>
@@ -60,19 +60,21 @@ if(mysqli_num_rows($sql2)>0) {
             */
             //var_dump($row2);
             echo '<tr>';
-            echo '<td>' . $row2['anotated_user_id'] . '</td>'; 
-            echo '<td> <img width=200 src="'  . $row2['original_image'] . '" ></td>';
-            echo '<td> <img width=200 src="'  .$row2['anotated_image'] . '" ></td>'; 
+            // echo '<td>' . $row2['anotated_user_id'] . '</td>'; 
+            echo '<td> <img width=400 src="'  . $row2['original_image'] . '" ></td>';
+            echo '<td> <img width=400 src="'  .$row2['anotated_image'] . '" ></td>'; 
             
             $querySelectFirstAnotated = 'select * from image_anotated where image_id='.$row2['anotated_reference'].' and user_id='.$row2['original_user_id'].' limit 1';
             //echo $querySelectFirstAnotated;
             $sql3 = mysqli_query($link, $querySelectFirstAnotated);
             if(mysqli_num_rows($sql3) == 1) {
                 $rowOfFirstAnotated = mysqli_fetch_array($sql3);
-                echo '<td> <img width=200 src="'  . $rowOfFirstAnotated['image'] . '" ></td>';
+                echo '<td> <img width=400 src="'  . $rowOfFirstAnotated['image'] . '" ></td>';
                 $image1 = substr($rowOfFirstAnotated['image'], 3);
+                $analisis1 = $rowOfFirstAnotated['analisis'];
                 $image2 = substr($row2['anotated_image'], 3);
-                echo '<td> <a href="/TA/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2.'"> Link Perbandingan </a></td>'; 
+                $analisis2 = $row2['anotated_analisis'];
+                echo '<td> <a href="/TA/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
             } 
             
             echo '</tr>';

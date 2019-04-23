@@ -9,12 +9,12 @@
         text-align: center;
     }
 </style>
-
 <?php
+session_start();
+echo "<h3> Similarity Result </h3>";
 
 // Direktori gambar
  $gambar = dirname(__DIR__);
- echo $gambar;
 
  $argv1 = $gambar . $_GET['image1'];
  $argv2 = $gambar . $_GET['image2'];
@@ -74,26 +74,25 @@ for ($x = 0; $x < $sx1; $x++) {
     }
 }
  
- 
+ $similari = 0;
 if (!$different_pixels) {
-    echo "100%";
+    $similari= 100;
 } else {
     if (empty($argv3)) {
         $argv3 = 'diffy.jpg'; // default result filename
     }
-    echo ($argv3);
     imagejpeg($diffi, $argv3);
     $total = $sx1 * $sy1;
     // echo "<h3 style="text-align:center; font-family: sans-serif;"> Result </h3>";
-    echo "<h3> Result </h3>";
     $sim = $different_pixels / $total;
     $similari = number_format(100-(100 * $sim), 2);
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$different_pixels/$total.' same pixels, or '.number_format(100-(100 * $different_pixels / $total), 2).' % </textarea></p>" ;
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
-    echo "<p><textarea class=\"hasil\"> '.$sim.' same pixels, or '.$similari.' %</textarea></p>";
-    echo "<br>";
-    echo "<br>";
+    
 }
+echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
+    echo "<br>";
+    echo "<br>";
 // menampilkan hasil
 ?>
 <?php
@@ -104,6 +103,23 @@ if (!$different_pixels) {
         echo '<a href="/TA/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
     }
 ?>
-<img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
-<img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>
+
+<table border=1> 
+<thead>
+    <tr>
+        <td> Image anotated reference </td>
+        <td> Image anotated </td>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td> <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ></td>
+        <td> <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ></td>
+    </tr>
+    <tr>
+        <td> <?php echo $_GET['analisis1'] ?> </td>
+        <td> <?php echo $_GET['analisis2'] ?> </td>
+    </tr>
+
+</tbody>
+</table> 

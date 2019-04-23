@@ -4,7 +4,7 @@
 	$username = $_POST['username'];
 	$pass = $_POST['password'];
 
-	$sql = "SELECT * from user WHERE username='$username' AND password='$pass'";
+	$sql = "SELECT * from user WHERE username='$username' AND password='$pass' AND akses = 1";
 	$execute  = mysqli_query($link, $sql);
 	if(mysqli_num_rows($execute) == 1) {
 		$row = mysqli_fetch_array($execute);
@@ -19,10 +19,12 @@
         } else if(($_SESSION['role']) == 'Expert' ) {
             header('Location: /TA/trialz.php');
         } else if(($_SESSION['role'])== 'Doctor')
-		    header('Location: /TA/trialzUser.php');
+			header('Location: /TA/trialzUser.php');
+		else if(($_SESSION['role'])== 'SUPERADMIN')
+		header('Location: /TA/super.php');
+			
         }
-    else {
-		alert('Your username or password wrong!');	
-	    //header('Location: /TA/login.php');
+    else {	
+	    header('Location: /TA/optan.php');
 	}
 ?>

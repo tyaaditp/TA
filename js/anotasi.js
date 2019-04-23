@@ -39,6 +39,7 @@ function render() {
       var img_anotated_blob = dataURItoBlob(saved_img);
 
       saveToDatabase(img_blob, img_anotated_blob) ;
+
       // -> image_id
     //   var image_id = 0;
     //   saveToDatabaseAnotated(img_blob, image_id) ;
@@ -123,8 +124,10 @@ function save_anotation_only () {
     }
   function saveAnotationOnlyToDatabase(image_url, imageAnotated) {
     var data = new FormData();
+    var isianalisis = document.getElementById('isianalisis').value;
     data.append('image_url', image_url);
     data.append('images[]', imageAnotated);
+    data.append('isianalisis',isianalisis);
     if (data) {
         $.ajax({
             url: "/TA/upload/upload-anotated.php",
@@ -134,6 +137,7 @@ function save_anotation_only () {
             contentType: false,
             success: function (res) {
                 console.log(res)
+                document.location.reload();
             }
         })
     }
@@ -152,9 +156,10 @@ function save_anotation_only () {
       success: function (res) {
             console.log(res);
             var data = new FormData();
+            var isianalisis = document.getElementById('isianalisis').value;
             data.append('images[]', imageAnotated);
             data.append('image_id', res);
-            console.log(data);
+            data.append('isianalisis',isianalisis);
             if (data) {
             $.ajax({
                 url: "/TA/upload/upload-anotated.php",
@@ -164,6 +169,7 @@ function save_anotation_only () {
                 contentType: false,
             success: function (res) {
                 console.log('succes');
+                document.location.reload();
 
             }});
         }

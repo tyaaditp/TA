@@ -120,7 +120,7 @@
 					<div class="col-md col-md-offset-2 text-center">
             <h2 class="white-text">Sign Up Now !</h2>
 						<p class="lead white-text">Let's OPTAN be your education platform. <br> Register your institution here.</p>
-						<a class="main-button icon-button" data-target="#registerForm" data-toggle="modal" href="#">Register Now !</a>
+						<a class="main-button icon-button" data-target="#registerForm" data-toggle="modal" href="#">REGISTER</a>
 					</div>
 
 				</div>

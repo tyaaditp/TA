@@ -79,7 +79,7 @@
 							<i class="feature-icon fa fa-low-vision"></i>
 							<div class="feature-content">
 								<h4>Simple Use Annotation Tools </h4>
-								<p>Ceteros fuisset mei no, soleat epicurei adipiscing ne vis. Et his suas veniam nominati.</p>
+								<p>This platform designed to be simply used by everyone with friendly tools and interface. </p>
 							</div>
 						</div>
 						<!-- /feature -->
@@ -89,7 +89,7 @@
 							<i class="feature-icon fa fa-percent"></i>
 							<div class="feature-content">
 								<h4>Compare to Expert Teachers</h4>
-								<p>Ceteros fuisset mei no, soleat epicurei adipiscing ne vis. Et his suas veniam nominati.</p>
+								<p>This platform allow users to compare their annotated images with experts of their institute. This enable users to independently studying retinal abnormalities.</p>
 							</div>
 						</div>
 						<!-- /feature -->
@@ -118,8 +118,8 @@
 				<div class="row">
 
 					<div class="col-md col-md-offset-2 text-center">
-            <h2 class="white-text">Contact Us</h2>
-						<p class="lead white-text">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
+            <h2 class="white-text">Sign Up Now !</h2>
+						<p class="lead white-text">Let's OPTAN be your education platform. <br> Register your institution here.</p>
 						<a class="main-button icon-button" data-target="#registerForm" data-toggle="modal" href="#">Register Now !</a>
 					</div>
 

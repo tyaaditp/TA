@@ -74,7 +74,7 @@ session_start();
               <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li> -->
               <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li> -->
               <!-- <li class="submenu_divider"></li> -->
-              <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
+              <!-- <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li> -->
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
               <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
@@ -82,7 +82,7 @@ session_start();
             </ul>
           </li>
 
-          <li class="nav-item active">View
+          <!-- <li class="nav-item active">View
             <ul>
               <!-- <li onclick="image_grid_toggle()" title="Toggle between single image view and image grid view">Toggle image grid view</li>
               <li onclick="leftsidebar_toggle()" title="Show or hide the sidebar shown in left hand side">Toggle left sidebar</li>
@@ -91,10 +91,10 @@ session_start();
               <li onclick="toggle_attributes_editor()" title="Show or hide a panel to update file and region attributes">Toggle attributes editor</li>
               <li onclick="annotation_editor_toggle_all_regions_editor()" title="Show or hide a panel to update annotations corresponding to file and region">Toggle annotation editor (Space)</li>
               <li class="submenu_divider"></li> -->
-              <li onclick="toggle_region_boundary_visibility()" title="Show or hide the region boundaries">Show/hide region boundaries (b)</li>
+              <!-- <li onclick="toggle_region_boundary_visibility()" title="Show or hide the region boundaries">Show/hide region boundaries (b)</li>
               <li onclick="toggle_region_id_visibility()" title="Show or hide the region id labels">Show/hide region labels (l)</li>
             </ul>
-          </li>
+          </li> -->
 
           <li class="nav-item active">User guide
             <ul>
@@ -256,8 +256,8 @@ session_start();
                 <div class="modal-body">
                   <form action="">
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Write your analysis here:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="isianalisis">Write your analysis here:</label>
+                      <textarea class="form-control" id="isianalisis" rows="3"></textarea>
                     </div>
                   </form>
                 </div>

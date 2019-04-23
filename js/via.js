@@ -9225,17 +9225,17 @@ function generate_img_index_list(input) {
   return intersect;
 }
 
-if ( ! _via_is_debug_mode ) {
-  // warn user of possible loss of data
-  window.onbeforeunload = function (e) {
-    e = e || window.event;
+// if ( ! _via_is_debug_mode ) {
+//   // warn user of possible loss of data
+//   window.onbeforeunload = function (e) {
+//     e = e || window.event;
 
-    // For IE and Firefox prior to version 4
-    if (e) {
-      e.returnValue = 'Did you save your data?';
-    }
+//     // For IE and Firefox prior to version 4
+//     if (e) {
+//       e.returnValue = 'Did you save your data?';
+//     }
 
-    // For Safari
-    return 'Did you save your data?';
-  };
-}
+//     // For Safari
+//     return 'Did you save your data?';
+//   };
+// }

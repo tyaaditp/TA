@@ -23,7 +23,8 @@
         }
     else {	
 		echo "<script type='text/javascript'>
-				alert('Your username or password may wrong!');
+				alert('Your username or password may wrong!'); 
+				window.location = '/TA/optan.php';
 			</script>";
 		// echo "<script type='text/javascript'>
 		// 	setInterval(function() {

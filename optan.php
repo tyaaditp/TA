@@ -146,6 +146,7 @@
               <form action="/TA/auth/login.php" method="POST">
                 <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
                 <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
+								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:beige; font-size:10px;">Don't have an account?</a><br><br>
                 <input type="Submit" name="submit" id="submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>

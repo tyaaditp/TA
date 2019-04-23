@@ -12,5 +12,5 @@
 
 	$execute  = mysqli_query($link, $sql);
 	
-	header('Location: /TA/login.php');
+	header('Location: /TA/optan.php');
 ?>

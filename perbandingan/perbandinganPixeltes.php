@@ -3,9 +3,9 @@
 // Direktori gambar
  $gambar = dirname(__DIR__);
 
- $argv1 = $gambar . '/uploads/ano-pratama.jpeg';
- $argv2 = $gambar . '/uploads/ano-gan.jpeg';
- $argv3 = $gambar .  '/uploads/hasil';
+ $argv1 = $gambar . '/uploads/hasil';
+ $argv2 = $gambar . '/uploads/hasil2';
+ $argv3 = $gambar .  '/uploads/hasil3';
  
 // Gambar masuk
 $i1 = @imagecreatefromstring(file_get_contents($argv1));

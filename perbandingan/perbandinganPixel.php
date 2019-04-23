@@ -62,7 +62,10 @@ for ($x = 0; $x < $sx1; $x++) {
         $rgb2 = imagecolorat($i2, $x, $y);
         $pix2 = imagecolorsforindex($i2, $rgb2);
  
-        if ($pix1 !== $pix2) { // different pixel
+        $rentang = 20;
+        if (($pix2['red'] >= $pix1['red']+$rentang || $pix2['red']  <= $pix1['red']-$rentang) 
+        && ($pix2['green'] >= $pix1['green']+30 || $pix2['green']  <= $pix1['green']-30)
+        && ($pix2['blue'] >= $pix1['blue']+$rentang || $pix2['blue']  <= $pix1['blue']-$rentang)) {
             // increment and paint in the diff image
             $different_pixels++;
             imagesetpixel($diffi, $x, $y, $green);
@@ -103,3 +106,4 @@ if (!$different_pixels) {
 ?>
 <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
 <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>
+<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>

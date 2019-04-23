@@ -36,18 +36,18 @@
 		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
 		// header('Location: /TA/optan.php');
 		// echo "<script type='text/javascript'>$('#loginFailed').modal('show');</script>";
-	// 	echo "<script type='text/javascript'>
-	// 	$.ajax({  
-			  
-	// 		data: {username:username, password:password},  
-	// 		success:function(data)  
-	// 		{  
-				   
-	// 				  alert('Wrong Data');  
-				     
-	// 		}  
-	//    }); 
-	// 	</script>";
+		// 	echo "<script type='text/javascript'>
+		// 	$.ajax({  
+				
+		// 		data: {username:username, password:password},  
+		// 		success:function(data)  
+		// 		{  
+					
+		// 				  alert('Wrong Data');  
+						
+		// 		}  
+		//    }); 
+		// 	</script>";
 		
 	}
 ?>

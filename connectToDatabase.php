@@ -39,24 +39,44 @@
                     }
                     }
                     else{
-                    echo "Role should not be empty";
+                    // echo "Role should not be empty";
+                    echo "<script type='text/javascript'>
+                            alert('Role should not be empty!'); 
+                            window.location = '/TA/admin.php';
+                        </script>";
                     die();
                     }
             } else {
-                echo "Password should not be empty";
+                // echo "Password should not be empty";
+                echo "<script type='text/javascript'>
+                            alert('Password should not be empty!'); 
+                            window.location = '/TA/admin.php';
+                        </script>";
                 die();
             }
          } else {
-            echo "Username should not be empty";
+            // echo "Username should not be empty";
+            echo "<script type='text/javascript'>
+                            alert('Username should not be empty!'); 
+                            window.location = '/TA/admin.php';
+                        </script>";
             die();
          }
      } else {
-        echo "Email should not be empty";
+        // echo "Email should not be empty";
+        echo "<script type='text/javascript'>
+                            alert('Email should not be empty!'); 
+                            window.location = '/TA/admin.php';
+                        </script>";
         die();
      }
 
 } else {
-echo "name should not be empty";
+// echo "name should not be empty";
+echo "<script type='text/javascript'>
+        alert('Name should not be empty!'); 
+        window.location = '/TA/admin.php';
+    </script>";
 die();
 }
 ?>

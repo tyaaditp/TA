@@ -25,6 +25,32 @@
 			
         }
     else {	
-	    header('Location: /TA/optan.php');
+		echo "<script type='text/javascript'>
+				alert('Your username or password may wrong!'); 
+				window.location = '/TA/optan.php';
+			</script>";
+		// echo "<script type='text/javascript'>
+		// 	setInterval(function() {
+		// 		if (confirm('Your username or password may wrong !')) {
+		// 			window.location.href = "/optan.php";
+		// 		}
+		// 	}, 3000);
+		// 	</script>";
+		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
+		// header('Location: /TA/optan.php');
+		// echo "<script type='text/javascript'>$('#loginFailed').modal('show');</script>";
+		// 	echo "<script type='text/javascript'>
+		// 	$.ajax({  
+				
+		// 		data: {username:username, password:password},  
+		// 		success:function(data)  
+		// 		{  
+					
+		// 				  alert('Wrong Data');  
+						
+		// 		}  
+		//    }); 
+		// 	</script>";
+		
 	}
 ?>

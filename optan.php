@@ -146,6 +146,7 @@
               <form action="/TA/auth/login.php" method="POST">
                 <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
                 <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
+								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:beige; font-size:10px;">Don't have an account?</a><br><br>
                 <input type="Submit" name="submit" id="submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>
@@ -154,6 +155,23 @@
           </center>
         </div>
     </div>
+			
+		<!-- login failed alert -->
+		<!-- <div class="modal" id="loginFailed" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+					<div class="modal-content bg-light">
+						<div class="modal-body">
+						
+							<p>Your username or password may wrong !</p>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+						</div>
+					</div>
+				</div>
+		</div> -->
+
 
     <!-- form register admin -->
     <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">
@@ -207,7 +225,7 @@
 					<!-- copyright -->
 					<div class="col-md-8 col-md-pull-4">
 							<div class="footer-copyright">
-								<span>&copy; Copyright 2019. All Rights Reserved. | TA.1819.1.1.L</a></span>
+								<span>&copy; Copyright 2019. All Rights Reserved. | TA.1819.1.1.L BME ITB</a></span>
 							</div>
 						</div>
 						<!-- /copyright -->
@@ -243,6 +261,22 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<!-- <script>
+				$.ajax({  
+                     url:"login.php",  
+                     method:"POST",  
+                     data: {username:username, password:password},  
+                     success:function(data)  
+                     {  
+                          //alert(data);  
+                          if(data == 'No')  
+                          {  
+                               alert("Wrong Data");  
+                          }    
+                     }  
+                }); 
+		</script> -->
+
 
 	</body>
 </html>

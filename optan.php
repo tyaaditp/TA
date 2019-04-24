@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['username'])) {
-		header('Location: /TA/');
+		header('Location: /');
 		die;
 	}
 ?>
@@ -143,7 +143,7 @@
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-              <form action="/TA/auth/login.php" method="POST">
+              <form action="/auth/login.php" method="POST">
                 <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
                 <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
 								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:beige; font-size:10px;">Don't have an account?</a><br><br>
@@ -183,7 +183,7 @@
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-              <form action="/TA/auth/register.php" method="POST" class="text-center">
+              <form action="/auth/register.php" method="POST" class="text-center">
                 <input type="text" name="name" class="text text-center" autocomplete="off" required placeholder="Name"><br><br>
                 <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="Username"><br><br>
                 <input type="password" name="password" class="text text-center" required placeholder="Password"><br><br>

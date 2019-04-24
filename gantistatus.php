@@ -11,11 +11,11 @@ if ($_POST['akses']==1) {
 $sql = "UPDATE user SET akses ='$status' WHERE id='$id'";
 $execute  = mysqli_query($link, $sql);
 if($execute) {
-    header('Location: /TA/super.php');        
+    header('Location: /super.php');        
     }
 else {
     alert('Your username or password wrong!');	
-    //header('Location: /TA/login.php');
+    //header('Location: /login.php');
 }
 
 ?>

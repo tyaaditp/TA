@@ -12,12 +12,9 @@
          if (!empty($username)) {
             if (!empty($password)) {
                 if (!empty($role)){
-                    $host = "localhost";
-                    $dbusername = "root";
-                    $dbpassword = "";
-                    $dbname = "TA_anotasi";
+                    require('./config.php');
                     // Create connection
-                    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+                    //$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
                     if (mysqli_connect_error()){
                     die('Connect Error ('. mysqli_connect_errno() .') '
                     . mysqli_connect_error());
@@ -25,24 +22,24 @@
                     else{
                     $sql = "INSERT INTO user (nama, email, username , parent_id, password, role)
                     values ('$nama','$email','$username','$parent_id','$password','$role')";
-                    if ($conn->query($sql)){
+                    if ($link->query($sql)){
                         $link_address = 'admin.php';
-                        header('Location: /TA/admin.php');
+                        header('Location: /admin.php');
                         //echo "<a href='$link_address'>Click here for back to admin page</a>";
                     // echo "New record is inserted sucessfully";
                     }
                     else{
                     echo "Error: ". $sql ."
-                    ". $conn->error;
+                    ". $link->error;
                     }
-                    $conn->close();
+                    $link->close();
                     }
                     }
                     else{
                     // echo "Role should not be empty";
                     echo "<script type='text/javascript'>
                             alert('Role should not be empty!'); 
-                            window.location = '/TA/admin.php';
+                            window.location = '/admin.php';
                         </script>";
                     die();
                     }
@@ -50,7 +47,7 @@
                 // echo "Password should not be empty";
                 echo "<script type='text/javascript'>
                             alert('Password should not be empty!'); 
-                            window.location = '/TA/admin.php';
+                            window.location = '/admin.php';
                         </script>";
                 die();
             }
@@ -58,7 +55,7 @@
             // echo "Username should not be empty";
             echo "<script type='text/javascript'>
                             alert('Username should not be empty!'); 
-                            window.location = '/TA/admin.php';
+                            window.location = '/admin.php';
                         </script>";
             die();
          }
@@ -66,7 +63,7 @@
         // echo "Email should not be empty";
         echo "<script type='text/javascript'>
                             alert('Email should not be empty!'); 
-                            window.location = '/TA/admin.php';
+                            window.location = '/admin.php';
                         </script>";
         die();
      }
@@ -75,7 +72,7 @@
 // echo "name should not be empty";
 echo "<script type='text/javascript'>
         alert('Name should not be empty!'); 
-        window.location = '/TA/admin.php';
+        window.location = '/admin.php';
     </script>";
 die();
 }

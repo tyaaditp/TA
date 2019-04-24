@@ -80,4 +80,4 @@ if (!$different_pixels) {
 // menampilkan hasil
 ?>
 
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>
+<img style='max-height:100%; max-width:100%' src='<?php echo "/uploads/" . basename($argv3) ?>'>

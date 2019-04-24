@@ -3,7 +3,7 @@
 <?php include("template/header.php"); ?>
 
 <h2>Register haha</h2>
-<form action="/TA/auth/register.php" method='post'>
+<form action="/auth/register.php" method='post'>
 	<div class="form-group">
 		<label for="inputEmail">Email address</label>
 		<input type="email" class="form-control" id="inputEmail" name="email">

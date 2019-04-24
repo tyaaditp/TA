@@ -15,19 +15,19 @@
 		$_SESSION['parent_id'] = $row['parent_id'];
 
         if(($_SESSION['role']) == 'admin' ) {
-            header('Location: /TA/admin.php');
+            header('Location: /admin.php');
         } else if(($_SESSION['role']) == 'Expert' ) {
-            header('Location: /TA/trialz.php');
+            header('Location: /trialz.php');
         } else if(($_SESSION['role'])== 'Doctor')
-			header('Location: /TA/trialzUser.php');
+			header('Location: /trialzUser.php');
 		else if(($_SESSION['role'])== 'SUPERADMIN')
-		header('Location: /TA/super.php');
+		header('Location: /super.php');
 			
         }
     else {	
 		echo "<script type='text/javascript'>
 				alert('Your username or password may wrong!'); 
-				window.location = '/TA/optan.php';
+				window.location = '/optan.php';
 			</script>";
 		// echo "<script type='text/javascript'>
 		// 	setInterval(function() {
@@ -37,7 +37,7 @@
 		// 	}, 3000);
 		// 	</script>";
 		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
-		// header('Location: /TA/optan.php');
+		// header('Location: /optan.php');
 		// echo "<script type='text/javascript'>$('#loginFailed').modal('show');</script>";
 		// 	echo "<script type='text/javascript'>
 		// 	$.ajax({  

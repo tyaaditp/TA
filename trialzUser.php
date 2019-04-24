@@ -78,7 +78,7 @@ session_start();
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
               <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
-              <li  title="Compare the image to check similarity"> <a href= "/TA/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
+              <li  title="Compare the image to check similarity"> <a href= "/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
           </li>
 

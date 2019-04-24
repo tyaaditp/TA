@@ -7627,7 +7627,7 @@ $.each(user_selected_images, function(key, value)
 });
   if (data) {
   $.ajax({
-    url: "/TA/upload/upload.php",
+    url: "/upload/upload.php",
     type: "POST",
     data: data,
     processData: false,

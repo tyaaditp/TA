@@ -130,7 +130,7 @@ function save_anotation_only () {
     data.append('isianalisis',isianalisis);
     if (data) {
         $.ajax({
-            url: "/TA/upload/upload-anotated.php",
+            url: "/upload/upload-anotated.php",
             type: "POST",
             data: data,
             processData: false,
@@ -148,7 +148,7 @@ function save_anotation_only () {
     data.append('images[]', imageOri);
     if (data) {
     $.ajax({
-      url: "/TA/upload/upload.php",
+      url: "/upload/upload.php",
       type: "POST",
       data: data,
       processData: false,
@@ -162,7 +162,7 @@ function save_anotation_only () {
             data.append('isianalisis',isianalisis);
             if (data) {
             $.ajax({
-                url: "/TA/upload/upload-anotated.php",
+                url: "/upload/upload-anotated.php",
                 type: "POST",
                 data: data,
                 processData: false,
@@ -183,7 +183,7 @@ function loadImages() {
     var value = e.options[e.selectedIndex].value;
     var text = e.options[e.selectedIndex].text;
     console.log(value, text);
-    $.post('/TA/user-images.php', { user_id: value}, (data) => {
+    $.post('/user-images.php', { user_id: value}, (data) => {
       buildImages(data);
     });
   }
@@ -214,7 +214,7 @@ function loadImages() {
   function loadUser() {
     $('#save-anotation-and-original').hide();
     $('#save-only-anotation').show();
-    $.get('/TA/user.php', (data)=> {
+    $.get('/user.php', (data)=> {
       buildData(data);
     })
   }

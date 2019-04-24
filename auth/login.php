@@ -27,17 +27,17 @@
     else {	
 		echo "<script type='text/javascript'>
 				alert('Your username or password may wrong!'); 
-				window.location = '/optan.php';
+				window.location = '/index.php';
 			</script>";
 		// echo "<script type='text/javascript'>
 		// 	setInterval(function() {
 		// 		if (confirm('Your username or password may wrong !')) {
-		// 			window.location.href = "/optan.php";
+		// 			window.location.href = "/index.php";
 		// 		}
 		// 	}, 3000);
 		// 	</script>";
 		// echo "<script type='text/javascript'>confirm('Your username or password may wrong!')</script>";
-		// header('Location: /optan.php');
+		// header('Location: /index.php');
 		// echo "<script type='text/javascript'>$('#loginFailed').modal('show');</script>";
 		// 	echo "<script type='text/javascript'>
 		// 	$.ajax({  

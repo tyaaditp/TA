@@ -12,5 +12,5 @@
 
 	$execute  = mysqli_query($link, $sql);
 	
-	header('Location: /optan.php');
+	header('Location: /index.php');
 ?>

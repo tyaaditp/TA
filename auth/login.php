@@ -14,14 +14,14 @@
 		$_SESSION['username'] = $row['username'];
 		$_SESSION['parent_id'] = $row['parent_id'];
 
-        if(($_SESSION['role']) == 'admin' ) {
-            header('Location: /admin.php');
-        } else if(($_SESSION['role']) == 'Expert' ) {
-            header('Location: /trialz.php');
-        } else if(($_SESSION['role'])== 'Doctor')
-			header('Location: /trialzUser.php');
-		else if(($_SESSION['role'])== 'SUPERADMIN')
-		header('Location: /super.php');
+        //if(($_SESSION['role']) == 'admin' ) {
+            header('Location: /index.php');
+        //} else if(($_SESSION['role']) == 'Expert' ) {
+        //    header('Location: /trialz.php');
+        //} else if(($_SESSION['role'])== 'Doctor')
+		//	header('Location: /trialzUser.php');
+		//else if(($_SESSION['role'])== 'SUPERADMIN')
+		//header('Location: /super.php');
 			
         }
     else {	

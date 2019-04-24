@@ -52,6 +52,14 @@
 							<?php
 							if(isset($_SESSION['username'])) {
 								echo '<p class="lead white-text">Selamat datang </p>' . $_SESSION['username'] ;
+								if(($_SESSION['role']) == 'Expert' ) {
+									echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a> ';
+									}
+								else {
+									echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a>';
+									}
+								echo '<a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;">Logout</a>';
+								
 							} else {
 								echo '<a class="main-button icon-button" data-target="#loginForm" data-toggle="modal" href="#">Login</a>';
 							}

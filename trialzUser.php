@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" type="image/png" href="/logooptan.png"/>
     <meta charset="UTF-8">
     <title>Annotation Page|OPTAN</title>
     <meta name="author" content="TA-L">

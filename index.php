@@ -1,9 +1,5 @@
 <?php
 	session_start();
-	if(isset($_SESSION['username'])) {
-		header('Location: /');
-		die;
-	}
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +49,14 @@
                             <!-- <h1 class="white-text">Edusite Free Online Training Courses</h1> -->
                             <img src="logooptan.png" alt="Logo Optan" width="25%">
 							<p class="lead white-text">Online Annotation Tools</p>
-							<a class="main-button icon-button" data-target="#loginForm" data-toggle="modal" href="#">Login</a>
+							<?php
+							if(isset($_SESSION['username'])) {
+								echo '<p class="lead white-text">Selamat datang </p>' . $_SESSION['username'] ;
+							} else {
+								echo '<a class="main-button icon-button" data-target="#loginForm" data-toggle="modal" href="#">Login</a>';
+							}
+							?>
+							
 						<!-- </div> -->
 					<!-- </div> -->
 				</div>
@@ -119,9 +122,15 @@
 				<div class="row">
 
 					<div class="col-md col-md-offset-2 text-center">
-            <h2 class="white-text">Sign Up Now !</h2>
-						<p class="lead white-text">Let's OPTAN be your education platform. <br> Register your institution here.</p>
-						<a class="main-button icon-button" data-target="#registerForm" data-toggle="modal" href="#">REGISTER</a>
+					<?php
+							if(isset($_SESSION['username'])) {
+								echo 'Selamat datang ' . $_SESSION['username'] ;
+							} else {
+            		echo '<h2 class="white-text">Sign Up Now !</h2>';
+								echo '<p class="lead white-text">Lets OPTAN be your education platform. <br> Register your institution here.</p>';
+								echo '<a class="main-button icon-button" data-target="#registerForm" data-toggle="modal" href="#">REGISTER</a>';
+							}
+					?>
 					</div>
 
 				</div>

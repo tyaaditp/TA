@@ -127,7 +127,7 @@ $conn->close();
                         <h5 style="color:beige;">Role : </h5>
                         <div class="form-check form-check-inline">
                             <input name="role" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Expert">
-                            <label class="form-check-label" for="inlineCheckbox1">Expert</label>
+                            <label class="form-check-label" for="inlineCheckbox1">Expertt</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input name="role" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Doctor">

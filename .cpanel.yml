@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/optanid/public_html
     - /bin/cp -R * $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - chmod 777 uploads

@@ -16,4 +16,5 @@ Desktop.ini
 # keep some hiddens
 !.htaccess
 !/.gitignore
+!/.cpanel.yml
 !/.travis.yml

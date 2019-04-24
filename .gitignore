@@ -9,7 +9,7 @@ Session.vim
 tmtags
 Thumbs.db
 Desktop.ini
-config.php
+/config.php
 
 # ignore Composer downloads
 /vendor/*

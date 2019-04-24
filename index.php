@@ -55,9 +55,17 @@
 								if(($_SESSION['role']) == 'Expert' ) {
 									echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a> ';
 									}
-								else {
+								else if(($_SESSION['role']) == 'Doctor' ) {
 									echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a>';
 									}
+								else if (($_SESSION['role']) == 'admin' ) {
+								echo '<a href="/admin.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Manage User</button></p></a>';
+									}
+									else if (($_SESSION['role']) == 'SUPERADMIN' ) {
+										echo '<a href="/super.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Manage Admin</button></p></a>';
+									}
+
+
 								echo '<a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;">Logout</a>';
 								
 							} else {

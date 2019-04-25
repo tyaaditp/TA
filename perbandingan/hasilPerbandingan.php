@@ -33,10 +33,10 @@ $sql2 = mysqli_query($link, $query);
 
 <?php
     if(($_SESSION['role']) == 'Expert' ) {
-        echo '<a href="/TA/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
+        echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
     }
     else {
-        echo '<a href="/TA/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
+        echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
     }
 ?>
 <table border=1> 
@@ -70,11 +70,11 @@ if(mysqli_num_rows($sql2)>0) {
             if(mysqli_num_rows($sql3) == 1) {
                 $rowOfFirstAnotated = mysqli_fetch_array($sql3);
                 echo '<td> <img width=400 src="'  . $rowOfFirstAnotated['image'] . '" ></td>';
-                $image1 = substr($rowOfFirstAnotated['image'], 3);
+                $image1 = $rowOfFirstAnotated['image'];
                 $analisis1 = $rowOfFirstAnotated['analisis'];
-                $image2 = substr($row2['anotated_image'], 3);
+                $image2 = $row2['anotated_image'];
                 $analisis2 = $row2['anotated_analisis'];
-                echo '<td> <a href="/TA/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
+                echo '<td> <a href="/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
             } 
             
             echo '</tr>';

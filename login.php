@@ -1,13 +1,13 @@
 <?php
 	session_start();
 	if(isset($_SESSION['username'])) {
-		header('Location: /TA/');
+		header('Location: /');
 		die;
 	}
 ?>
 <!-- <?php include("template/header.php"); ?> -->
 <!-- <h2>Login Form</h2>
-<form action="/TA/auth/login.php" method='POST'>
+<form action="/auth/login.php" method='POST'>
 	<div class="form-group">
 		<label for="inputEmail">Email address</label>
 		<input type="email" class="form-control" id="inputEmail" name="email">
@@ -64,7 +64,7 @@
         <center>
             <div id="main">
                 <h1>OPTAN LOGIN FORM</h1>
-                <form action="/TA/auth/login.php" method="POST">
+                <form action="/auth/login.php" method="POST">
                     <input type="text" name="username" class="text" autocomplete="off" required placeholder="username"><br><hr><br>
                     <input type="password" name="password" class="text" required placeholder="password"><br><hr><br>
                     <input type="Submit" name="submit" id="submit">

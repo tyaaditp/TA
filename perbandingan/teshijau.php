@@ -143,14 +143,14 @@ for ($x = 0; $x < $sx1; $x++) {
 ?>
 <?php
     if(($_SESSION['role']) == 'Expert' ) {
-        echo '<a href="/TA/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
+        echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
     }
     else {
-        echo '<a href="/TA/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
+        echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
     }
 ?>
 <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ><br>
 <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ><br>
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv3) ?>'>
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv4) ?>'>
-<img style='max-height:100%; max-width:100%' src='<?php echo "/TA/uploads/" . basename($argv5) ?>'>
+<img style='max-height:100%; max-width:100%' src='<?php echo "/uploads/" . basename($argv3) ?>'>
+<img style='max-height:100%; max-width:100%' src='<?php echo "/uploads/" . basename($argv4) ?>'>
+<img style='max-height:100%; max-width:100%' src='<?php echo "/uploads/" . basename($argv5) ?>'>

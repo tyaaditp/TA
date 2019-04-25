@@ -49,12 +49,12 @@ session_start();
             </ul>
             <ul class="navbar-nav ml-auto" style="height:50px;">
                 <li class="nav-item">
-                    <a class="nav-link btn btn-sm btn-outline-secondary" href="/TA/logout.php" tabindex="-1"><b>Logout</b></a>
+                    <a class="nav-link btn btn-sm btn-outline-secondary" href="/logout.php" tabindex="-1"><b>Logout</b></a>
                 </li>
             </ul>
             <!-- <div class="navbar-nav mr-auto" style="height:50px;">
                 <img src="minilogo.png" alt="minilogo optan" style="width:70px;" class="nav-item active">
-                <a class="nav-link pull-right" href="/TA/logout.php" tabindex="-1">Logout</a>
+                <a class="nav-link pull-right" href="/logout.php" tabindex="-1">Logout</a>
             </div> -->
             <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -78,14 +78,15 @@ session_start();
             </tr>
 
  <?php
-$conn = mysqli_connect("localhost", "root", "", "TA_anotasi");
+ require('./config.php');
+//$conn = mysqli_connect("localhost", "root", "", "TA_anotasi");
   // Check connection
-  if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
+  if ($link->connect_error) {
+   die("Connection failed: " . $link->connect_error);
   } 
   $id = $_SESSION['id'];
   $sql = "SELECT id, nama, email, username, password, role, akses FROM user"; 
-  $result = $conn->query($sql);
+  $result = $link->query($sql);
   if ($result->num_rows > 0) {
    // output data of each row
    while($row = $result->fetch_assoc()) {
@@ -101,7 +102,7 @@ $conn = mysqli_connect("localhost", "root", "", "TA_anotasi");
 }
 echo "</table>";
 } else { echo "0 results"; }
-$conn->close();
+$link->close();
 ?>
         </table>
     </div>

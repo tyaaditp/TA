@@ -97,10 +97,10 @@ echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
 ?>
 <?php
     if(($_SESSION['role']) == 'Expert' ) {
-        echo '<a href="/TA/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
+        echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
     }
     else {
-        echo '<a href="/TA/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
+        echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
     }
 ?>
 
@@ -113,8 +113,8 @@ echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
 </thead>
 <tbody>
     <tr>
-        <td> <img widht=40 src='<?php echo "/TA" . $_GET['image1'] ?>' ></td>
-        <td> <img widht=40 src='<?php echo "/TA" . $_GET['image2'] ?>' ></td>
+        <td> <img widht=40 src='<?php echo  $_GET['image1'] ?>' ></td>
+        <td> <img widht=40 src='<?php echo  $_GET['image2'] ?>' ></td>
     </tr>
     <tr>
         <td> <?php echo $_GET['analisis1'] ?> </td>

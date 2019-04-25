@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/optanid/public_html
+    - /bin/chmod 777 uploads
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp ../config-server.php /home/optanid/public_html/config.php

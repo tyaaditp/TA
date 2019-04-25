@@ -9,6 +9,7 @@ Session.vim
 tmtags
 Thumbs.db
 Desktop.ini
+/config.php
 
 # ignore Composer downloads
 /vendor/*
@@ -16,4 +17,5 @@ Desktop.ini
 # keep some hiddens
 !.htaccess
 !/.gitignore
+!/.cpanel.yml
 !/.travis.yml

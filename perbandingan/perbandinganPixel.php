@@ -64,8 +64,8 @@ for ($x = 0; $x < $sx1; $x++) {
  
         $rentang = 20;
         if (($pix2['red'] >= $pix1['red']+$rentang || $pix2['red']  <= $pix1['red']-$rentang) 
-        && ($pix2['green'] >= $pix1['green']+$rentang || $pix2['green']  <= $pix1['green']-$rentang)
-        && ($pix2['blue'] >= $pix1['blue']+$rentang || $pix2['blue']  <= $pix1['blue']-$rentang)) {
+        || ($pix2['green'] >= $pix1['green']+$rentang || $pix2['green']  <= $pix1['green']-$rentang)
+        || ($pix2['blue'] >= $pix1['blue']+$rentang || $pix2['blue']  <= $pix1['blue']-$rentang)) {
             // increment and paint in the diff image
             $different_pixels++;
             imagesetpixel($diffi, $x, $y, $green);

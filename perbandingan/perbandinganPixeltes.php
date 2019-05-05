@@ -3,8 +3,8 @@
 // Direktori gambar
  $gambar = dirname(__DIR__);
 
- $argv1 = $gambar . '/uploads/hasil';
- $argv2 = $gambar . '/uploads/hasil2';
+ $argv1 = $gambar . '/uploads/ori-dimas-908';
+ $argv2 = $gambar . '/uploads/ano-azrul-361';
  $argv3 = $gambar .  '/uploads/hasil3';
  
 // Gambar masuk
@@ -49,7 +49,10 @@ for ($x = 0; $x < $sx1; $x++) {
         $rgb2 = imagecolorat($i2, $x, $y);
         $pix2 = imagecolorsforindex($i2, $rgb2);
  
-        if ($pix1 !== $pix2) { // different pixel (dibuat range jangan sama persis)
+        $rentang = 20;
+        if (($pix2['red'] >= $pix1['red']+$rentang || $pix2['red']  <= $pix1['red']-$rentang) 
+        || ($pix2['green'] >= $pix1['green']+$rentang || $pix2['green']  <= $pix1['green']-$rentang)
+        || ($pix2['blue'] >= $pix1['blue']+$rentang || $pix2['blue']  <= $pix1['blue']-$rentang)) { // different pixel (dibuat range jangan sama persis)
             // increment and paint in the diff image
             $different_pixels++;
             imagesetpixel($diffi, $x, $y, $green);
@@ -78,6 +81,7 @@ if (!$different_pixels) {
     echo "same pixels : $different_pixels/$total same pixels :", number_format(100-(100 * $different_pixels / $total), 2), '%';
 }
 // menampilkan hasil
+
 ?>
 
 <img style='max-height:100%; max-width:100%' src='<?php echo "/uploads/" . basename($argv3) ?>'>

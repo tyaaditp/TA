@@ -1,10 +1,10 @@
 <?php
 
 $host 		= "localhost";
-$username	= "root";
-$password	= "";
+$dbusername	= "root";
+$dbpassword	= "";
 $dbname		= "TA_anotasi";
 
-$link = mysqli_connect($host, $username, $password, $dbname)
+$link = mysqli_connect($host, $dbusername, $dbpassword, $dbname)
 or die("Salah server, nama pengguna, atau passwordnya!"); 
 ?>

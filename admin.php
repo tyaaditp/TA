@@ -103,7 +103,7 @@ $link->close();
 
     <!-- form add new data user -->
     <div class="modal" id="addDataUser" tabindex="-1" data-backdrop="static">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-md">
           <center>
           <div class="modal-content bg-dark">
             <div class="modal-header">
@@ -117,13 +117,14 @@ $link->close();
                     <input type="text" name="username" placeholder="Username" class="text-center"><br><br>
                     <input type="password" name="password" placeholder="Password" class="text-center"><br><br>
                     <!-- <input type="text" name="role" placeholder="User Role"><br><br> -->
-                    <!-- <div class="form-group">
+                    <div class="form-group">
+                        <h5 style="color:beige;">Role : </h5>  
                         <select name="role" placeholder="Select Role">
-                            <option class="disabled">Select Role</option>
+                            <!-- <option class="disabled">Select Role</option> -->
                             <option>Expert</option>
                             <option>Doctor</option>
-                        </select> -->
-                        <h5 style="color:beige;">Role : </h5>
+                        </select>
+                        <!-- <h5 style="color:beige;">Role : </h5>
                         <div class="form-check form-check-inline">
                             <input name="role" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Expert">
                             <label class="form-check-label" for="inlineCheckbox1">Expertt</label>
@@ -131,8 +132,8 @@ $link->close();
                         <div class="form-check form-check-inline">
                             <input name="role" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Doctor">
                             <label class="form-check-label" for="inlineCheckbox2">Doctor</label>
-                        </div><br><br>
-                    <!-- </div> -->
+                        </div><br><br> -->
+                    </div>
                     <input type="Submit" value="Submit" class="submit" id="submit"> 
                     <!-- <input type="Submit" name="submit" id="submit"> -->
                     <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>

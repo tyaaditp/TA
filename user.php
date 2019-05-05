@@ -1,5 +1,7 @@
 <?php
- require('./config.php');
+session_start();
+require('./config.php');
+$parent_id = $_SESSION['parent_id'];
 
 $sql = mysqli_query($link, "SELECT id, nama FROM user where parent_id = '$parent_id' and role = 'Expert' ");
 

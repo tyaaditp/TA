@@ -38,11 +38,11 @@ if (!$i2) {
 $sx1 = imagesx($i1);
 $sy1 = imagesy($i1);
  
-// compare dimensi
-if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
-    echo "The images are not even the same size";
-    // sexit(1);
-}
+// // compare dimensi
+// if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
+//     echo "Similarity are not valid because The images are not the same size";
+//     // sexit(1);
+// }
  
 // create a diff image (gambar perbedaan)
 $diffi = imagecreatetruecolor($sx1, $sy1);
@@ -90,9 +90,15 @@ if (!$different_pixels) {
     // echo "<p style="text-align: center;"><textarea rows="3" style="width:25%;"> '.$sim.' same pixels, or <b> '.$similari.' % </b></textarea></p>";
     
 }
+// compare dimensi
+if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
+    echo "Similarity are not valid because The images are not the same size";
+    // sexit(1);
+}else{
 echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
     echo "<br>";
     echo "<br>";
+}
 // menampilkan hasil
 ?>
 <?php

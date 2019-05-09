@@ -38,11 +38,11 @@ $i2 = @imagecreatefromstring(file_get_contents($argv2));
 $sx1 = imagesx($i1);
 $sy1 = imagesy($i1);
  
-// compare dimensi
-if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
-    echo "The images are not even the same size";
-    exit(1);
-}
+// // compare dimensi
+// if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
+//     echo "The images are not even the same size";
+//     exit(1);
+// }
  
 // create a diff image (gambar perbedaan)
 $diffi = imagecreatetruecolor($sx1, $sy1);

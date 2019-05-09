@@ -92,7 +92,7 @@ if (!$different_pixels) {
 }
 // compare dimensi
 if ($sx1 !== imagesx($i2) || $sy1 !== imagesy($i2)) {
-    echo "<p><textarea class=\"hasil\">Similarity are not valid because The images are not the same size %</textarea></p>";
+    echo "<p><textarea class=\"hasil\">Similarity are not valid because The images are not the same size </textarea></p>";
     echo "<br>";
     echo "<br>";
     // sexit(1);

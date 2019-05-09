@@ -48,10 +48,10 @@
 						<!-- <div class="col-md-8"> -->
                             <!-- <h1 class="white-text">Edusite Free Online Training Courses</h1> -->
                             <img src="logooptan.png" alt="Logo Optan" width="25%">
-							<p class="lead white-text">Online Annotation Tools</p>
+							<p class="lead white-text">Online Annotation Tools cek2</p>
 							<?php
 							if(isset($_SESSION['username'])) {
-								echo '<p class="lead white-text">Welcome test </p>' . $_SESSION['username'] ;
+								echo '<p class="lead white-text">Welcome </p>' . $_SESSION['username'] ;
 								echo '<p class="lead white-text"> </p>' . $_SESSION['role'] ;
 								if(($_SESSION['role']) == 'Expert' ) {
 									echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a> ';

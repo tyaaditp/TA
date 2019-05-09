@@ -170,7 +170,9 @@ session_start();
         
       </div>
       <form action="" class="form-inline my-2 my-lg-0">
-        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['username'] ?></a>
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;"><?php echo $_SESSION['username'] ?></a>
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a>
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;">Home</a>
         <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;">Logout</a>
       </form>
       <!-- <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a> -->

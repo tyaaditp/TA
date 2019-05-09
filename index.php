@@ -51,7 +51,8 @@
 							<p class="lead white-text">Online Annotation Tools</p>
 							<?php
 							if(isset($_SESSION['username'])) {
-								echo '<p class="lead white-text">Selamat datang </p>' . $_SESSION['username'] ;
+								echo '<p class="lead white-text">Welcome </p>' . $_SESSION['username'] ;
+								echo '<p class="lead white-text"> </p>' . $_SESSION['role'] ;
 								if(($_SESSION['role']) == 'Expert' ) {
 									echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Start annotation</button></p></a> ';
 									}

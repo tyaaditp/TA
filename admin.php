@@ -48,6 +48,12 @@ session_start();
             </ul>
             <ul class="navbar-nav ml-auto" style="height:50px;">
                 <li class="nav-item">
+                    <a class="nav-link btn btn-sm btn-outline-secondary" href="/admin.php" tabindex="-1"><?php echo $_SESSION['username'] ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm btn-outline-secondary" href="/admin.php" tabindex="-1"><?php echo $_SESSION['role'] ?></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn btn-sm btn-outline-secondary" href="/logout.php" tabindex="-1"><b>Logout</b></a>
                 </li>
             </ul>

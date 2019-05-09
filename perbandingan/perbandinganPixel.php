@@ -24,15 +24,15 @@ echo "<h3> Similarity Result </h3>";
 $i1 = @imagecreatefromstring(file_get_contents($argv1));
 $i2 = @imagecreatefromstring(file_get_contents($argv2));
 
-// cek gambar
-if (!$i1) {
-    echo $argv1 . ' is not a valid image';
-    exit(1);
-}
-if (!$i2) {
-    echo $argv2 . ' is not a valid image';
-    exit(1);
-}
+// // cek gambar
+// if (!$i1) {
+//     echo $argv1 . ' is not a valid image';
+//     exit(1);
+// }
+// if (!$i2) {
+//     echo $argv2 . ' is not a valid image';
+//     exit(1);
+// }
  
 // cari dimensi gambar
 $sx1 = imagesx($i1);
@@ -62,7 +62,7 @@ for ($x = 0; $x < $sx1; $x++) {
         $rgb2 = imagecolorat($i2, $x, $y);
         $pix2 = imagecolorsforindex($i2, $rgb2);
  
-        $rentang = 40;
+        $rentang = 100;
         if (($pix2['red'] >= $pix1['red']+$rentang || $pix2['red']  <= $pix1['red']-$rentang) 
         || ($pix2['green'] >= $pix1['green']+$rentang || $pix2['green']  <= $pix1['green']-$rentang)
         || ($pix2['blue'] >= $pix1['blue']+$rentang || $pix2['blue']  <= $pix1['blue']-$rentang)) {
@@ -115,6 +115,7 @@ echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
     <tr>
         <td> <img widht=40 src='<?php echo  $_GET['image1'] ?>' ></td>
         <td> <img widht=40 src='<?php echo  $_GET['image2'] ?>' ></td>
+        <td> <img widht=40 src='<?php echo  "/uploads/" . basename($argv3) ?>' ></td>
     </tr>
     <tr>
         <td> <?php echo $_GET['analisis1'] ?> </td>

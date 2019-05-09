@@ -163,16 +163,16 @@
     <div class="modal" id="loginForm" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog modal-sm">
           <center>
-          <div class="modal-content bg-dark">
+          <div class="modal-content bg-white">
             <div class="modal-header">
-              <h4 class="modal-title" style="color:beige;">OPTAN LOGIN FORM</h4>
+              <h4 class="modal-title" style="color:black;">OPTAN LOGIN FORM</h4>
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
               <form action="/auth/login.php" method="POST">
                 <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
                 <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
-								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:beige; font-size:10px;">Don't have an account?</a><br><br>
+								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:black; font-size:10px;">Don't have an account?</a><br><br>
                 <input type="Submit" name="submit" id="submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>
@@ -203,9 +203,9 @@
     <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog">
           <center>
-          <div class="modal-content bg-dark">
+          <div class="modal-content bg-white">
             <div class="modal-header">
-              <h4 class="modal-title" style="color:beige;">OPTAN REGISTER FORM</h4>
+              <h4 class="modal-title" style="color:black;">OPTAN REGISTER FORM</h4>
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">

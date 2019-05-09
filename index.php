@@ -48,7 +48,7 @@
 						<!-- <div class="col-md-8"> -->
                             <!-- <h1 class="white-text">Edusite Free Online Training Courses</h1> -->
                             <img src="logooptan.png" alt="Logo Optan" width="25%">
-							<p class="lead white-text">Online Annotation Tools cek2</p>
+							<p class="lead white-text">Online Annotation Tools</p>
 							<?php
 							if(isset($_SESSION['username'])) {
 								echo '<p class="lead white-text">Welcome </p>' . $_SESSION['username'] ;

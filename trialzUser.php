@@ -45,20 +45,25 @@ session_start();
     <div class="container" id="ui_top_panel">
       <!-- menu bar -->
       <div class="menubar collapse navbar-collapse" id="navbarSupportedContent">
-        <img src="minilogo.png" alt="minilogo optan" class="mr-2" style="width:5em;">
+        <img src="minilogo.png" alt="minilogo optan" class="mr-2" href="index.php" style="width:5em;">
         <ul class="navbar-nav mr-auto" style="color: white;">
           <!-- <li onclick="show_home_panel()" style="cursor:pointer; font-family: Helvetica; font-size:175%; color:rgb(230, 199, 28)"><b>OPTAN</b></li> -->
           <li class="nav-item active">Project
             <ul>
               <!-- <li onclick="project_open_select_project_file()" title="Load a VIA project (from a JSON file)">Load</li> -->
-              <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li> <!-- (as a JSON file)-->
+              <!-- <li id="save-anotation-and-original" onclick="saving()" title="save to database">Save All</li>  -->
+              <!-- (as a JSON file) -->
+              <li onclick="project_file_add_url_with_input()" title="Select Reference">New Project</li>
               <li id="save-only-anotation" onclick="saving_annotation()" title="save to database">Save Annotation Only</li> <!-- (as a JSON file)-->
               <!-- <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li> -->
               <!-- <li class="submenu_divider"></li> -->
               <!-- <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li> -->
               <!-- <li onclick="sel_local_images()" title="Add images from reference expert">Select Reference</li> -->
               <li class="submenu_divider"></li>
-              <li onclick="project_file_add_url_with_input()" title="Select Reference">Select Reference</li>
+              <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
+              <li  title="Compare the image to check similarity"> <a href= "/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
+              <li class="submenu_divider"></li>
+              <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <!-- <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li> -->
               <!-- <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li> -->
               <!-- <li onclick="project_file_remove_with_confirm()" title="Remove selected file (i.e. file currently being shown)">Remove file</li> -->
@@ -67,25 +72,25 @@ session_start();
             </ul>
           </li>
 
-          <li class="nav-item active">Annotation
+          <!-- <li class="nav-item active">Annotation
             <ul>
-              <!-- <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li> -->
-              <!-- <li onclick="download_all_region_data('json')" title="Export annotaitons to a JSON file">Export Annotations (as json)</li>
-              <li onclick="" class="submenu_divider"></li> -->
-              <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li> -->
-              <!-- <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li> -->
-              <!-- <li class="submenu_divider"></li> -->
-              <!-- <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li> -->
+              <li onclick="download_all_region_data('csv')" title="Export annotations to a CSV file">Export Annotations (as csv)</li>
+              <li onclick="download_all_region_data('json')" title="Export annotaitons to a JSON file">Export Annotations (as json)</li>
+              <li onclick="" class="submenu_divider"></li>
+              <li onclick="sel_local_data_file('annotations')" title="Import annotations from a CSV file">Import Annotations (from csv)</li>
+              <li onclick="sel_local_data_file('annotations')" title="Import annotations from a JSON file">Import Annotations (from json)</li>
+              <li class="submenu_divider"></li>
+              <li onclick="show_annotation_data()" title="Show a preview of annotations (opens in a new browser windows)">Preview Annotations</li>
               <li onclick="download_as_image()" title="Download an image containing the annotations">Download as Image</li>
               <li class="submenu_divider"></li>
               <li data-target="#analisisdokter" data-toggle="modal">Add Analysis</li>
               <li  title="Compare the image to check similarity"> <a href= "/perbandingan/hasilPerbandingan.php"> Check the Similarity </a> </li>
             </ul>
-          </li>
+          </li> -->
 
           <!-- <li class="nav-item active">View
             <ul>
-              <!-- <li onclick="image_grid_toggle()" title="Toggle between single image view and image grid view">Toggle image grid view</li>
+              <li onclick="image_grid_toggle()" title="Toggle between single image view and image grid view">Toggle image grid view</li>
               <li onclick="leftsidebar_toggle()" title="Show or hide the sidebar shown in left hand side">Toggle left sidebar</li>
 <li onclick="toggle_img_fn_list_visibility()" title="Show or hide a panel to update annotations corresponding to file and region">Toggle image filename list</li>
               <li class="submenu_divider"></li>
@@ -164,13 +169,12 @@ session_start();
         <a id="region_shape_polygon" onclick="select_region_shape('polygon')"><img src="svg/Pentagon.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polygon" id="shape_polygon"></a>
         <a id="region_shape_point" onclick="select_region_shape('point')"><img src="svg/si-glyph-circle.svg" style="width:10px; height:10px; padding-left: 0.1rem;" title="Point" id="shape_point"></a>
         <a id="region_shape_polyline" onclick="select_region_shape('polyline')"><img src="svg/Polyline.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polyline" id="shape_polyline"></a>
-        
       </div>
       <form action="" class="form-inline my-2 my-lg-0">
-      <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;"><?php echo $_SESSION['username'] ?></a>
-        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a>
-        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;">Home</a>
-        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;">Logout</a>
+      <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" style="color:beige;"><?php echo $_SESSION['username'] ?> as <?php echo $_SESSION['role'] ?></a>
+        <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a> -->
+        <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;">Home</a> -->
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
       </form>
       <!-- <a class="btn btn-outline-secondary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php">Logout</a> -->
       <!-- <form class="form-inline my-2 my-lg-1" style="display: inline-block;">

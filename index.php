@@ -48,8 +48,7 @@
 						<!-- <div class="col-md-8"> -->
                             <!-- <h1 class="white-text">Edusite Free Online Training Courses</h1> -->
                             <img src="logooptan.png" alt="Logo Optan" width="25%">
-							<p class="lead white-text">Online Annotation Tools
-							</p>
+							<p class="lead white-text">Online Annotation Tools</p>
 							<?php
 							if(isset($_SESSION['username'])) {
 								echo '<p class="lead white-text">Welcome </p>' . $_SESSION['username'] ;
@@ -165,16 +164,16 @@
     <div class="modal" id="loginForm" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog modal-sm">
           <center>
-          <div class="modal-content bg-white">
+          <div class="modal-content bg-dark">
             <div class="modal-header">
-              <h4 class="modal-title" style="color:black;">OPTAN LOGIN FORM</h4>
+              <h4 class="modal-title" style="color:beige;">OPTAN LOGIN FORM</h4>
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
               <form action="/auth/login.php" method="POST">
-                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="username"><br><br>
-                <input type="password" name="password" class="text text-center" required placeholder="password"><br><br>
-								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:black; font-size:10px;">Don't have an account?</a><br><br>
+                <input type="text" name="username" class="text text-center bg-light" autocomplete="off" required placeholder="username"><br><br>
+                <input type="password" name="password" class="text text-center bg-light" required placeholder="password"><br><br>
+								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:grey; font-size:10px;">Don't have an account?</a><br><br>
                 <input type="Submit" name="submit" id="submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>
@@ -205,17 +204,17 @@
     <div class="modal" id="registerForm" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog">
           <center>
-          <div class="modal-content bg-white">
+          <div class="modal-content bg-dark">
             <div class="modal-header">
-              <h4 class="modal-title" style="color:black;">OPTAN REGISTER FORM</h4>
+              <h4 class="modal-title" style="color:beige;">OPTAN REGISTER FORM</h4>
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
               <form action="/auth/register.php" method="POST" class="text-center">
-                <input type="text" name="name" class="text text-center" autocomplete="off" required placeholder="Name"><br><br>
-                <input type="text" name="username" class="text text-center" autocomplete="off" required placeholder="Username"><br><br>
-                <input type="password" name="password" class="text text-center" required placeholder="Password"><br><br>
-                <input type="email" class="text text-center" id="inputEmail" name="email" required placeholder="Email Address"><br><br>
+                <input type="text" name="name" class="text text-center bg-light" autocomplete="off" required placeholder="Name"><br><br>
+                <input type="text" name="username" class="text text-center bg-light" autocomplete="off" required placeholder="Username"><br><br>
+                <input type="password" name="password" class="text text-center bg-light" required placeholder="Password"><br><br>
+                <input type="email" class="text text-center bg-light" id="inputEmail" name="email" required placeholder="Email Address"><br><br>
                 <input type="Submit" name="submit" id="submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>
@@ -236,11 +235,11 @@
 
 					<!-- footer logo -->
 					<!-- <div class="col-md-6"> -->
-						<div class="footer-logo">
+						<!-- <div class="footer-logo">
 							<a class="logo" href="index.html">
 								<img src="logooptan.png" style="width:150px; height:150px;" alt="logo">
 							</a>
-						</div>
+						</div> -->
 					<!-- </div> -->
 					<!-- footer logo -->
 

@@ -29,6 +29,7 @@ $sql2 = mysqli_query($link, $query);
         
     }
 </style>
+
 <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>
 
 <?php

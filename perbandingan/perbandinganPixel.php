@@ -34,7 +34,10 @@
     }
     .navbar{
         margin:0 !important;
-	    padding: 0px !important;
+	    padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .hasil{
         width: 25%;
@@ -70,7 +73,7 @@
         ?>
       </li>
     </ul>
-    <ul>
+    <ul class="navbar-nav mr-auto">
       <h3 style="font-family:sans-serif; color: #efb523;">Similarity Result</h3>
     </ul>
     <form action="" class="form-inline my-2 my-lg-0">

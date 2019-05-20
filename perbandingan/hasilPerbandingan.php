@@ -44,7 +44,8 @@ $sql2 = mysqli_query($link, $query);
         
     }
     .navbar{
-        margin:0 !important;
+        /* margin:0 !important; */
+        margin-bottom: 50px;
 	    /* padding: 0px !important; */
         padding-top: 0px !important;
         padding-bottom: 0px !important;
@@ -60,7 +61,7 @@ $sql2 = mysqli_query($link, $query);
 <!-- navbar -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <img src="minilogo.png" alt="minilogo optan" class="mr-2" href="index.php" style="width:5em;">
+  <img src="minilogo.png" alt="minilogo optan" class="mr-3" href="index.php" style="width:5em;">
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

@@ -1,3 +1,13 @@
+<?php
+session_start();
+require('../config.php');
+
+$user_id = $_SESSION['id'];
+$query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image', image_anotated.analisis as 'anotated_analisis'  from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_anotated.user_id = " . $user_id;
+$sql2 = mysqli_query($link, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,8 +43,9 @@
         
     }
     .navbar{
-        margin:0 !important;
-	    padding-top: 0px !important;
+        /* margin:0 !important; */
+	    margin-bottom: 50px;
+        padding-top: 0px !important;
         padding-bottom: 0px !important;
         padding-right: 10px;
         padding-left: 10px;
@@ -57,7 +68,7 @@
 <!-- navbar -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <img src="minilogo.png" alt="minilogo optan" class="mr-2" href="index.php" style="width:5em;">
+  <img src="minilogo.png" alt="minilogo optan" class="mr-3" href="index.php" style="width:5em;">
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

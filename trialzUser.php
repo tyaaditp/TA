@@ -124,6 +124,7 @@ session_start();
 
       <!-- Shortcut toolbar -->
       <div class="toolbar collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="border border-secondary mr-2">
         <a><img src="svg/si-glyph-folder-open.svg" style="width:16px; height:16px;" title="Open File" id="icon_open" onclick="project_open_select_project_file()"></a>
         <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="project_save_with_confirm()"></a> -->
         <!-- <a><img src="svg/si-glyph-floppy-disk.svg" style="width:16px; height:16px;" title="Save Project" id="icon_save" onclick="download_as_image()"></a> -->
@@ -136,6 +137,7 @@ session_start();
         <a><img src="svg/si-glyph-clipboard.svg" style="width:16px; height:16px;" title="Paste Region" id="icon_paste" onclick="paste_sel_regions_in_current_image()"></a>
         <a><img src="svg/si-glyph-square-eight-angle-point.svg" style="width:16px; height:16px;" title="Select Region" id="icon_selectall" onclick="sel_all_regions()"></a>
         <a><img src="svg/si-glyph-delete.svg" style="width:16px; height:16px;" title="Delete Selected Region" id="icon_close" onclick="del_sel_regions()"></a>
+              </div>
         <!-- <svg onclick="project_save_with_confirm()" viewbox="0 0 24 24"><use xlink:href="#icon_save"></use><title>Save Project</title></svg>
         <svg onclick="settings_panel_toggle()" viewbox="0 0 24 24"><use xlink:href="#icon_settings"></use><title>Update Project Settings</title></svg> -->
         <!--
@@ -163,12 +165,14 @@ session_start();
         <!-- <svg onclick="del_sel_regions()" viewbox="0 0 24 24"><use xlink:href="#icon_close"></use><title>Delete Region</title></svg> -->
       
       <!-- Annotation Region Shape -->
+      <div class="border border-secondary">
         <a id="region_shape_rect" class="selected" onclick="select_region_shape('rect')" style="display: none;"><img src="svg/Rectangle_Stroked.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Rectangle"></a>
         <a id="region_shape_circle" onclick="select_region_shape('circle')"><img src="svg/circle.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Circle" id="shape_circle"></a>
         <a id="region_shape_ellipse" onclick="select_region_shape('ellipse')"><img src="svg/Ellipse.svg" style="width:30px; height:21px; padding-left: 0.1rem;" title="Ellipse" id="shape_ellipse"></a>
         <a id="region_shape_polygon" onclick="select_region_shape('polygon')"><img src="svg/Pentagon.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polygon" id="shape_polygon"></a>
         <a id="region_shape_point" onclick="select_region_shape('point')"><img src="svg/si-glyph-circle.svg" style="width:10px; height:10px; padding-left: 0.1rem;" title="Point" id="shape_point"></a>
         <a id="region_shape_polyline" onclick="select_region_shape('polyline')"><img src="svg/Polyline.svg" style="width:20px; height:20px; padding-left: 0.1rem;" title="Polyline" id="shape_polyline"></a>
+              </div>
       </div>
       <form action="" class="form-inline my-2 my-lg-0">
       <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" style="color:beige;"><?php echo $_SESSION['username'] ?> as <?php echo $_SESSION['role'] ?></a>

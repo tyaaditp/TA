@@ -206,7 +206,7 @@
           <center>
           <div class="modal-content bg-dark">
             <div class="modal-header">
-              <h4 class="modal-title" style="color:beige;">OPTAN REGISTER FORM</h4>
+              <h4 class="modal-title" style="color:beige;">INSTITUTION REGISTER FORM</h4>
               <button class="close pull-right" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">

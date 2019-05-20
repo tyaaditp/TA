@@ -170,6 +170,12 @@ img {
   border-style: none;
 }
 
+img:hover {
+  /* vertical-align: middle; */
+  border-style: solid;
+  border-color: chocolate;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;

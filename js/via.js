@@ -5299,9 +5299,9 @@ function setup_user_input_panel(ok_handler, input, config, cancel_handler) {
   c.setAttribute('class', 'content');
   var html = [];
   html.push('<p class="title">' + config.title + '</p>');
-  html.push('Choose Doctor :  ');
-  // html.push('<button onclick="loadUser()" style="width:25%; margin:auto; display:inline;"> Choose Doctor </button>');
-  html.push('<div id="user_list" style="display:inline; width:25%;"></div><br>');
+  // html.push('Choose Doctor :  ');
+  html.push('<button onclick="loadUser()" style="width:25%; margin:auto; display:inline;"> Choose Doctor </button>');
+  html.push('<div id="user_list" style="display:inline; width:75%;"></div><br>');
   html.push('<button onclick="loadImages()" style="width:25%; margin-top:10px; display:inline;"> Load Images </button>');
   html.push('<div id="user_images"></div>');
   html.push('<div class="user_inputs">');

@@ -173,7 +173,8 @@ img {
 img:hover {
   /* vertical-align: middle; */
   /* border-style: solid; */
-  border-color: chocolate;
+  /* border-color: chocolate; */
+  outline: 2px solid chocolate;
 }
 
 svg {

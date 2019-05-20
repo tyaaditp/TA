@@ -167,12 +167,12 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none;
+  border-style: solid;
 }
 
 img:hover {
   /* vertical-align: middle; */
-  border-style: solid;
+  /* border-style: solid; */
   border-color: chocolate;
 }
 

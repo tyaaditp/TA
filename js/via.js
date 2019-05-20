@@ -6808,7 +6808,7 @@ function project_file_add_abs_path_input_done(input) {
 
 function project_file_add_url_with_input() {
   var config = {'title':'Chose Your Doctor References' };
-  var input = { 'url': { type:'text', name:'Chosen', placeholder:'Please make choices', disabled:true, size:50 },
+  var input = { 'url': { type:'text', name:'Chosen', placeholder:'Please make choices', disabled:true, size:75 },
               };
     //           var input = { 'url': { type:'text', name:'add one URL', placeholder:'http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg', disabled:false, size:50 },
 		// 'url_list': { type:'textarea', name:'or, add multiple URL (one url per line)', placeholder:'http://www.example.com/image1.jpg\nhttp://www.example.com/image2.jpg\nhttp://www.example.com/image3.png', disabled:false, rows:5, cols:80 }

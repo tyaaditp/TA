@@ -43,6 +43,10 @@ $sql2 = mysqli_query($link, $query);
         text-align: center;
         
     }
+    .navbar{
+        margin:0 !important;
+	    padding: 0px !important;
+    }
     </style>
 
 </head>
@@ -68,6 +72,9 @@ $sql2 = mysqli_query($link, $query);
         ?>
       </li>
     </ul>
+    <ul>
+      <h3 style="text-align: center; font-family:sans-serif; color: #efb523;">Annotation Similarity</h3>
+    </ul>
     <form action="" class="form-inline my-2 my-lg-0">
         <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" style="color:beige;"><?php echo $_SESSION['username'] ?> as <?php echo $_SESSION['role'] ?></a>
         <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a> -->
@@ -79,7 +86,7 @@ $sql2 = mysqli_query($link, $query);
 
 <!-- end of navbar -->
 
-<h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>
+<!-- <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2> -->
 
 <!-- <?php
     if(($_SESSION['role']) == 'Expert' ) {

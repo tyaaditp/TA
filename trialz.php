@@ -107,7 +107,7 @@ session_start();
 
           <li class="nav-item active">User guide
             <ul>
-              <a href="User_Guide_Expert.pdf" download>Download User Guide</a>
+              <a href="USER_GUIDE_Expert.pdf" download>Download User Guide</a>
             </ul>
           </li>
 

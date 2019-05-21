@@ -104,7 +104,8 @@ session_start();
 
           <li class="nav-item active">User guide
             <ul>
-              <a href="User_Guide.pdf" download>Download User Guide</a>
+              <a href="USER_GUIDE_Residen.pdf" download>Download User Guide</a>
+              <!-- <a href="#" data-target="#userGuide" data-toggle="modal">User Guide</a> -->
             </ul>
           </li>
 
@@ -554,6 +555,31 @@ POSSIBILITY OF SUCH DAMAGE.
         </div>
       </div> <!-- end of display_area -->
     </div> <!-- end of middle_panel -->
+
+
+    <!-- User Guide -->
+    <!-- <div class="modal" id="userGuide" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+          <center>
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h4 class="modal-title" style="color:beige;">OPTAN USER GUIDE</h4>
+              <button class="close pull-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <ul class="text-left">
+                  <li>Untuk memulai anotasi baru, klik Project > New Project</li>
+                  <li></li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          </center>
+        </div>
+    </div> -->
+
+    <!-- End of User Guide -->
 
     <!-- this vertical spacer is needed to allow scrollbar to show
          items like Keyboard Shortcut hidden under the attributes panel -->

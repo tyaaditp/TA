@@ -3,8 +3,8 @@
 // Direktori gambar
  $gambar = dirname(__DIR__);
 
- $argv1 = $gambar . '/uploads/ori-dimas-908';
- $argv2 = $gambar . '/uploads/ano-azrul-361';
+ $argv1 = $gambar . '/uploads/ano-azrul-83';
+ $argv2 = $gambar . '/uploads/ano-azrul-182';
  $argv3 = $gambar .  '/uploads/hasil3';
  
 // Gambar masuk

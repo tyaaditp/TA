@@ -123,7 +123,7 @@ echo "<p><textarea class=\"hasil\">       $similari %</textarea></p>";
     <tr>
         <td> <img widht=40 src='<?php echo  $_GET['image1'] ?>' ></td>
         <td> <img widht=40 src='<?php echo  $_GET['image2'] ?>' ></td>
-        <!-- <td> <img widht=40 src='<?php echo  "/uploads/" . basename($argv3) ?>' ></td> -->
+        <td> <img widht=40 src='<?php echo  "/uploads/" . basename($argv3) ?>' ></td>
     </tr>
     <tr>
         <td> <?php echo $_GET['analisis1'] ?> </td>

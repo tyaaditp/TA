@@ -8,7 +8,22 @@ $sql2 = mysqli_query($link, $query);
 
 ?>
 
-<style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="/logooptan.png"/>
+    <meta charset="UTF-8">
+    <title>Annotation Page|OPTAN</title>
+    <meta name="author" content="TA-L">
+    <meta name="description" content="Optan is a standalone image annotator application">
+
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="../optancss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom CSS -->
+    <style>
     table{
         border: 1px solid black;
         border-collapse: collapse;
@@ -28,17 +43,64 @@ $sql2 = mysqli_query($link, $query);
         text-align: center;
         
     }
-</style>
-<h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2>
+    .navbar{
+        /* margin:0 !important; */
+        margin-bottom: 50px;
+	    /* padding: 0px !important; */
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    </style>
 
-<?php
+</head>
+
+<body>
+
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img src="minilogo.png" alt="minilogo optan" class="mr-3" href="index.php" style="width:5em;">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <!-- <a class="nav-link" href="#">Back to Annotation Page <span class="sr-only">(current)</span></a> -->
+        <?php
+            if(($_SESSION['role']) == 'Expert' ) {
+                echo '<a href="/trialz.php" style="color: beige;">Back to annotation page</a> ';
+            }
+            else {
+                echo '<a href="/trialzUser.php" style="color: beige;">Back to annotation page</a>';
+            }
+        ?>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+      <h3 style="text-align: center; font-family:sans-serif; color: #efb523;">Annotation Similarity</h3>
+    </ul>
+    <form action="" class="form-inline my-2 my-lg-0">
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" style="color:beige;"><?php echo $_SESSION['username'] ?> as <?php echo $_SESSION['role'] ?></a>
+        <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a> -->
+        <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;">Home</a> -->
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
+    </form>
+  </div>
+</nav>
+
+<!-- end of navbar -->
+
+<!-- <h2 style="text-align: center; font-family:sans-serif;">Annotation Similarity</h2> -->
+
+<!-- <?php
     if(($_SESSION['role']) == 'Expert' ) {
         echo '<a href="/trialz.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a> ';
     }
     else {
         echo '<a href="/trialzUser.php"><p style="text-align: center;"><button style="background-color:#050300; color:#e8c033; font-family:sans-serif;">Back to annotation page</button></p></a>';
     }
-?>
+?> -->
 <table border=1> 
 <thead>
     <tr>
@@ -88,3 +150,12 @@ if(mysqli_num_rows($sql2)>0) {
 
 </tbody>
 </table>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/via.js"></script>
+    <script src="../js/anotasi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

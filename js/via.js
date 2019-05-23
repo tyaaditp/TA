@@ -5299,9 +5299,10 @@ function setup_user_input_panel(ok_handler, input, config, cancel_handler) {
   c.setAttribute('class', 'content');
   var html = [];
   html.push('<p class="title">' + config.title + '</p>');
+  // html.push('Choose Doctor :  ');
   html.push('<button onclick="loadUser()" style="width:25%; margin:auto; display:inline;"> Choose Doctor </button>');
-  html.push('<div id="user_list" style="display:inline;"></div>');
-  html.push('<button onclick="loadImages()" style="width:25%; margin:auto; display:inline;"> Load Images </button>');
+  html.push('<div id="user_list" style="display:inline; width:75%;"></div><br>');
+  html.push('<button onclick="loadImages()" style="width:25%; margin-top:10px; display:inline;"> Load Images </button>');
   html.push('<div id="user_images"></div>');
   html.push('<div class="user_inputs">');
   var key;
@@ -6807,7 +6808,7 @@ function project_file_add_abs_path_input_done(input) {
 
 function project_file_add_url_with_input() {
   var config = {'title':'Chose Your Doctor References' };
-  var input = { 'url': { type:'text', name:'Chosen', placeholder:'Please make choices', disabled:true, size:50 },
+  var input = { 'url': { type:'text', name:'Chosen', placeholder:'Please make choices', disabled:true, size:75 },
               };
     //           var input = { 'url': { type:'text', name:'add one URL', placeholder:'http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg', disabled:false, size:50 },
 		// 'url_list': { type:'textarea', name:'or, add multiple URL (one url per line)', placeholder:'http://www.example.com/image1.jpg\nhttp://www.example.com/image2.jpg\nhttp://www.example.com/image3.png', disabled:false, rows:5, cols:80 }

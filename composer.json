@@ -1,0 +1,5 @@
+{
+    "require": {
+        "gutza/octave-daemon": "^1.0"
+    }
+}

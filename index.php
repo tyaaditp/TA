@@ -174,7 +174,7 @@
                 <input type="text" name="username" class="text text-center bg-light" autocomplete="off" required placeholder="username"><br><br>
                 <input type="password" name="password" class="text text-center bg-light" required placeholder="password"><br><br>
 								<a href="#" data-target="#registerForm" data-toggle="modal" style="color:grey; font-size:10px;">Don't have an account?</a><br><br>
-                <input type="Submit" name="submit" id="submit">
+                <input type="Submit" name="submit" id="submit" value="Submit">
                 <input type="button" name="cancel" value="Cancel" data-dismiss="modal"/>
               </form>
             </div>

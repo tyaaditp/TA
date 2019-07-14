@@ -4,9 +4,9 @@ import numpy as np
 import cv2
 
 # Load an color image 
-a = cv2.imread('dokterF4o.jpg')
-b = cv2.imread('dokterF4a1.jpg')
-c = cv2.imread('dokterF4a2.jpg')
+a = cv2.imread('ori.jpg')
+b = cv2.imread('ori4.jpg')
+c = cv2.imread('ori5.jpg')
 
 # tampilkan gambar
 

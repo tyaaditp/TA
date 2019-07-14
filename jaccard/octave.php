@@ -1,5 +1,4 @@
-<?php
-$e = escapeshellcmd('python /Users/adityapratama/jaccard/jaccardp.py');
-$output = shell_exec($e);
+<?php 
+$output = passthru('./jaccardp.py 2>&1');
 var_dump($output);
 ?>

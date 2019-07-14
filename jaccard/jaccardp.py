@@ -4,9 +4,9 @@ import numpy as np
 import cv2
 
 # Load an color image 
-a = cv2.imread('ori.jpg')
-b = cv2.imread('ori4.jpg')
-c = cv2.imread('ori5.jpg')
+a = cv2.imread('dokterF4o.jpg')
+b = cv2.imread('dokterF4a1.jpg')
+c = cv2.imread('dokterF4a2.jpg')
 
 # tampilkan gambar
 
@@ -20,8 +20,8 @@ g1 =  cv2.cvtColor(kurang1, cv2.COLOR_BGR2GRAY)
 g2 =  cv2.cvtColor(kurang2, cv2.COLOR_BGR2GRAY)
 
 # konversi ke binary
-bin1,dst1 = cv2.threshold(g1,0,255,cv2.THRESH_BINARY)
-bin2,dst2 = cv2.threshold(g2,0,255,cv2.THRESH_BINARY)
+bin1,dst1 = cv2.threshold(g1,10,255,cv2.THRESH_BINARY)
+bin2,dst2 = cv2.threshold(g2,10,255,cv2.THRESH_BINARY)
 
 
 
@@ -79,4 +79,4 @@ pixelTotal = cv2.countNonZero(total)
 
 # jaccard 
 presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
-print(presentase)
+print (round(presentase,2))

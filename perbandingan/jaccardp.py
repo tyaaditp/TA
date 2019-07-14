@@ -1,3 +1,9 @@
+<?php 
+$command = escapeshellcmd('python ‎⁨Untitled⁩/Users⁩/adityapratama⁩/jaccard⁩/jaccardp.py');
+$output = shell_exec($command);
+echo $output;
+?>
+
 import numpy as np
 import cv2
 

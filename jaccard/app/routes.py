@@ -15,9 +15,9 @@ def hitung():
 	path3 = request.args.get('path3')
 
 	# Load an color image 
-	a = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path1)))
-	b = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path2)))
-	c = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path3)))
+	a = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path1)))
+	b = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path2)))
+	c = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path3)))
 
 	# tampilkan gambar
 

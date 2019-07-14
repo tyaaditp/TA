@@ -8,10 +8,6 @@ import cv2
 
 @app.route('/')
 @app.route('/index')
-def index():
-	return render_template('index.html')
-
-@app.route('/hitung')
 def hitung():
 	path1 = request.args.get('path1')
 	path2 = request.args.get('path2')

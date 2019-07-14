@@ -136,7 +136,8 @@ if(mysqli_num_rows($sql2)>0) {
                 $analisis1 = $rowOfFirstAnotated['analisis'];
                 $image2 = $row2['anotated_image'];
                 $analisis2 = $row2['anotated_analisis'];
-                echo '<td> <a href="/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
+                // echo '<td> <a href="/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
+                echo '<td> <a href="/python?path1='.$image1.'&image2='.$image2. '&path2='.$analisis1. '&path3='.$analisis2.'"> Check Similarity </a></td>'; 
             } 
             
             echo '</tr>';

@@ -78,5 +78,5 @@ def hitung():
 	# cv2.destroyAllWindows()
 
 	# jaccard 
-	presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
+	presentase = round(((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100),2)
 	return render_template('index.html', presentase=presentase,path1=path1[1], path2=path2[1],path3=path3[1],analisis1=analisis1,analisis2=analisis2 )

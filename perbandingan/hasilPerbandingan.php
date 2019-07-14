@@ -84,7 +84,7 @@ $sql2 = mysqli_query($link, $query);
         <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" style="color:beige;"><?php echo $_SESSION['username'] ?> as <?php echo $_SESSION['role'] ?></a>
         <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="" style="color:beige;"><?php echo $_SESSION['role'] ?></a> -->
         <!-- <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="index.php" style="color:beige;">Home</a> -->
-        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
+        <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
     </form>
   </div>
 </nav>

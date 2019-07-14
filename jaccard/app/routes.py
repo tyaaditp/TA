@@ -14,6 +14,9 @@ def hitung():
 	path2 = request.args.get('path2')[1:].split('/')
 	path3 = request.args.get('path3')[1:].split('/')
 
+	analisis1 = request.args.get('analisis1')
+	analisis2 = request.args.get('analisis2')
+
 
 	print (os.path.abspath(os.path.join(os.getcwd(), os.pardir, path1[0], path1[1] )))
 	# Load an color image 
@@ -76,4 +79,4 @@ def hitung():
 
 	# jaccard 
 	presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
-	return render_template('index.html', presentase=presentase,path1=path1, path2=path2,path3=path3 )
+	return render_template('index.html', presentase=presentase,path1=path1[1], path2=path2[1],path3=path3[1],analisis1=analisis1,analisis2=analisis2 )

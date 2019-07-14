@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Presentase</h1>
-    {{ presentase }}
-    <img src="/uploads/{{path1}}" /> 
-    <img src="/uploads/{{path2}}" /> 
-    <img src="/uploads/{{path3}}" /> 
+    <h3> Similarity Result </h3>
+    <textarea class=hasil>  {{ presentase }} %</textarea>
+    <table border=1> 
+        <thead>
+            <tr>
+                <td> Image anotated reference </td>
+                <td> Image anotated </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <img width="40" src="/uploads/{{path1}}" ></td>
+                <td> <img width="40" src="/uploads/{{path2}}" /></td>
+                <td> <img width="40"src="/uploads/{{path3}}" /> </td>
+            </tr>
+            <tr>
+                <td> {{analisis1}} </td>
+                <td> {{analisis2}} </td>
+            </tr>
+        
+        </tbody>
+    </table> 
 {% endblock %}

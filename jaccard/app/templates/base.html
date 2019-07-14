@@ -1,12 +1,77 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Microblog</title>
-        {% else %}
-        <title>Welcome to Microblog</title>
-        {% endif %}
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="/logooptan.png"/>
+    <meta charset="UTF-8">
+    <title>Annotation Page|OPTAN</title>
+    <meta name="author" content="TA-L">
+    <meta name="description" content="Optan is a standalone image annotator application">
+
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="../optancss.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom CSS -->
+    <style>
+    table{
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    thead{
+        font-family: sans-serif;
+        background-color: #efb523;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    tbody tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+    td{
+        text-align: center;
+        
+    }
+    .navbar{
+        /* margin:0 !important; */
+	    margin-bottom: 50px;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .hasil{
+        width: 25%;
+    }
+    p{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    </style>
+
+</head>
     <body>
+        <!-- navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="minilogo.png" alt="minilogo optan" class="mr-3" href="/index.php" style="width:5em;">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <h3 style="font-family:sans-serif; color: #efb523;">Similarity Result</h3>
+          </ul>
+        </div>
+      </nav>
         {% block content %}{% endblock %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     </body>
 </html>

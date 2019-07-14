@@ -10,14 +10,16 @@ import os
 @app.route('/index')
 def hitung():
 
-	path1 = request.args.get('path1')
-	path2 = request.args.get('path2')
-	path3 = request.args.get('path3')
+	path1 = request.args.get('path1')[1:].split('/')
+	path2 = request.args.get('path2')[1:].split('/')
+	path3 = request.args.get('path3')[1:].split('/')
 
+
+	print (os.path.abspath(os.path.join(os.getcwd(), os.pardir, path1[0], path1[1] )))
 	# Load an color image 
-	a = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path1)))
-	b = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path2)))
-	c = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path3)))
+	a = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path1[0], path1[1] )))
+	b = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path2[0], path2[1] )))
+	c = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, path3[0], path3[1] )))
 
 	# tampilkan gambar
 

@@ -4,18 +4,20 @@ from app import app
 
 import numpy as np
 import cv2
-
+import os
 
 @app.route('/')
 @app.route('/index')
 def hitung():
+
 	path1 = request.args.get('path1')
 	path2 = request.args.get('path2')
 	path3 = request.args.get('path3')
+
 	# Load an color image 
-	a = cv2.imread(path1)
-	b = cv2.imread(path2)
-	c = cv2.imread(path3)
+	a = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path1)))
+	b = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path2)))
+	c = cv2.imread(os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'uploads', path3)))
 
 	# tampilkan gambar
 
@@ -72,4 +74,4 @@ def hitung():
 
 	# jaccard 
 	presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
-	return str(presentase)
+	return render_template('index.html', presentase=presentase,path1=path1, path2=path2,path3=path3 )

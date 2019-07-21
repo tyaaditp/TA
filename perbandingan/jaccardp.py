@@ -1,9 +1,3 @@
-<?php 
-$command = escapeshellcmd('python ‎⁨Untitled⁩/Users⁩/adityapratama⁩/jaccard⁩/jaccardp.py');
-$output = shell_exec($command);
-echo $output;
-?>
-
 import numpy as np
 import cv2
 
@@ -83,4 +77,4 @@ pixelTotal = cv2.countNonZero(total)
 
 # jaccard 
 presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
-print(presentase)
+print round((presentase),2)

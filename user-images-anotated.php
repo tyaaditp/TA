@@ -23,7 +23,7 @@ if(mysqli_num_rows($sql2)>0) {
                 
                 //
                 $image1 = $row2['anotated_image'];
-                $analisis2 = $row2['anotated_analisis'];
+                $analisis1 = $row2['anotated_analisis'];
                 $style =     'display: inline-block; max-width: 98%; height: auto; width: 30%; margin: 1%;';
                 $htmlimage = '<img style="'. $style . '" id="img" src="'.$row2['anotated_image'].'" alt="gambar origninal" width="200"/>' ;
 

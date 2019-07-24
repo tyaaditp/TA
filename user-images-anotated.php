@@ -15,10 +15,10 @@ if(mysqli_num_rows($sql2)>0) {
             $sql3 = mysqli_query($link, $querySelectFirstAnotated);
             if(mysqli_num_rows($sql3) == 1) {
                 $rowOfFirstAnotated = mysqli_fetch_array($sql3);
-                $image2 = $rowOfFirstAnotated['image'];
-                $analisis2 = $rowOfFirstAnotated['analisis'];
-                $image1 = $row2['anotated_image'];
-                $analisis1 = $row2['anotated_analisis'];
+                $image1 = $rowOfFirstAnotated['image'];
+                $analisis1 = $rowOfFirstAnotated['analisis'];
+                $image2 = $row2['anotated_image'];
+                $analisis2 = $row2['anotated_analisis'];
                 $style =     'display: inline-block; max-width: 98%; height: auto; width: 30%; margin: 1%;';
                 $htmlimage = '<img style="'. $style . '" id="img" src="'.$row2['anotated_image'].'" alt="gambar origninal" width="200"/>' ;
 

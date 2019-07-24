@@ -9,6 +9,8 @@ import os
 @app.route('/')
 @app.route('/index')
 def hitung():
+	
+	parent_id = request.args.get('parent_id')
 
 	path1 = request.args.get('path1')[1:].split('/')
 	path2 = request.args.get('path2')[1:].split('/')
@@ -185,4 +187,4 @@ def hitung():
 		print (presentase)
 		# jaccard
 	
-	return render_template('index.html', presentase=round(presentase,2),presentaseling=round(presentaseling,2),presentasetitik=round(presentasetitik,2),presentasegaris=round(presentasegaris,2),path1=path1[1], path2=path2[1],path3=path3[1],analisis1=analisis1,analisis2=analisis2 )
+	return render_template('index.html', presentase=round(presentase,2),presentaseling=round(presentaseling,2),presentasetitik=round(presentasetitik,2),presentasegaris=round(presentasegaris,2),path1=path1[1], path2=path2[1],path3=path3[1],analisis1=analisis1,analisis2=analisis2,parent_id=parent_id )

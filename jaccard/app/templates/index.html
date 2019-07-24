@@ -1,10 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3> Similarity Result </h3>
     <div>
         <textarea style="margin:20px auto;display: block;height: 100px;" class=hasil>Total: {{ presentase }} %&#13;&#10;Circle: {{ presentaseling }} %&#13;&#10;Point: {{ presentasetitik }} %&#13;&#10;Line: {{ presentasegaris }} %</textarea>
     </div>
+    <input id="parent_id" type="hidden" value="{{ parent_id }}">
+
+    <button  style="margin:20px auto;display: block;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Select Another References</button>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Select References</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button id="pilihref" value="val_1" name="but1">Select Doctor</button> <select name="nama" id="listdokter"></select>
+                <button id="loadimageano" value="val_1" name="but1"> Load Image</button>
+                <div id="images"> </div>
+            </div>
+        
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        
+            </div>
+        </div>
+        </div>
+   
+
     <table border=1> 
         <thead>
             <tr>
@@ -24,4 +54,6 @@
         
         </tbody>
     </table> 
+
 {% endblock %}
+

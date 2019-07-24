@@ -70,8 +70,31 @@
         </div>
       </nav>
         {% block content %}{% endblock %}
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+<script>
+$("#pilihref").click(function(e) {
+    e.preventDefault();
+    var parent_id = $("#parent_id").val();
+    $.get('/userpython.php?parent_id='+parent_id, (data)=> {
+        console.log(data)
+      $('#listdokter').html(data);
+    })
+});
 
+$("#loadimageano").click(function(e) {
+    e.preventDefault();
+    $.post('/user-images-anotated.php', { user_id: $('#listdokter').val(), parent_id:$("#parent_id").val() }, (data) => {
+      console.log(data);
+      $('#images').html(data);
+    });
+});
+
+</script>
     </body>
 </html>

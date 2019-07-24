@@ -137,7 +137,7 @@ if(mysqli_num_rows($sql2)>0) {
                 $image2 = $row2['anotated_image'];
                 $analisis2 = $row2['anotated_analisis'];
                 // echo '<td> <a href="/perbandingan/perbandinganPixel.php?image1='.$image1.'&image2='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
-                echo '<td> <a href="/python?path1='.$row2['original_image'].'&path2='.$image1.'&path3='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
+                echo '<td> <a href="/python?parent_id='. $_SESSION['parent_id'] .'&path1='.$row2['original_image'].'&path2='.$image1.'&path3='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'"> Check Similarity </a></td>'; 
             } 
             
             echo '</tr>';

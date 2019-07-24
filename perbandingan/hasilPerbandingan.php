@@ -1,6 +1,9 @@
 <?php
 session_start();
 require('../config.php');
+if(!(isset($_SESSION['id']))) {
+    header('Location: /index.php');
+} 
 
 $user_id = $_SESSION['id'];
 $query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image', image_anotated.analisis as 'anotated_analisis'  from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_anotated.user_id = " . $user_id;

@@ -11,7 +11,7 @@ $query = "SELECT image_original.id as 'original_id', image_original.user_id as '
 $sql2 = mysqli_query($link, $query);
 if(mysqli_num_rows($sql2)>0) {
     while ($row2 = mysqli_fetch_assoc($sql2)) {
-        $querySelectFirstAnotated = "select * from image_anotated where image='/uploads/".$image_anotated."' and user_id=".$row2['original_user_id']." limit 1";
+        $querySelectFirstAnotated = "select * from image_anotated where image='/uploads/".$image_anotated."' limit 1";
             //echo $querySelectFirstAnotated;
             $sql3 = mysqli_query($link, $querySelectFirstAnotated);
             

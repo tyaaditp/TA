@@ -4,7 +4,8 @@ session_start();
 require('./config.php');
 $user_id = $_POST['user_id'];
 $parent_id = $_POST['parent_id'];
-$query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image', image_anotated.analisis as 'anotated_analisis'  from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_anotated.user_id = " . $user_id;
+$image_ori = '/uploads/'. $_POST['image_ori'];
+$query = "SELECT image_original.id as 'original_id', image_original.user_id as 'original_user_id', image_original.image as 'original_image', image_anotated.id as 'anotated_id', image_anotated.user_id as 'anotated_user_id', image_anotated.image_id as 'anotated_reference', image_anotated.image as 'anotated_image', image_anotated.analisis as 'anotated_analisis'  from image_original INNER JOIN image_anotated ON image_original.id=image_anotated.image_id AND image_original.image= ". $image_ori." AND image_anotated.user_id = " . $user_id;
 
 $sql2 = mysqli_query($link, $query);
 if(mysqli_num_rows($sql2)>0) {

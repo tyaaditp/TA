@@ -19,7 +19,7 @@ if(mysqli_num_rows($sql2)>0) {
                 $image1 = $row2['anotated_image'];
                 $analisis1 = $row2['anotated_analisis'];
                 $style =     'display: inline-block; max-width: 98%; height: auto; width: 30%; margin: 1%;';
-                $htmlimage = '<img style="'. $style . '" id="img" src="/'.$row2['anotated_image'].'" alt="gambar origninal" width="200"/>' ;
+                $htmlimage = '<img style="'. $style . '" id="img" src="'.$row2['anotated_image'].'" alt="gambar origninal" width="200"/>' ;
 
                 echo '<a href="/python?parent_id='.$parent_id.'&path1='.$row2['original_image'].'&path2='.$image1.'&path3='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'">' . $htmlimage . '</a>' ;
 

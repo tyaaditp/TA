@@ -80,3 +80,12 @@ pixelTotal = cv2.countNonZero(total)
 # jaccard 
 presentase = ((pixelTotal/(pixelAnotasi1+pixelAnotasi2-pixelTotal))*100)
 print (round(presentase,2))
+
+
+# TT = pixelAnotasi1+pixelAnotasi2-pixelTotal
+# if TT != 0:
+#     presentase = ((pixelTotal/(TT))*100)
+#     print (round(presentase,2))
+# else:
+#     presentase = 0
+#     print (presentase)

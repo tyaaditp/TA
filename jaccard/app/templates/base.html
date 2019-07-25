@@ -55,23 +55,34 @@
     <body>
         <!-- navbar -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="minilogo.png" alt="minilogo optan" class="mr-3" href="/index.php" style="width:5em;">
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                    <a href="/perbandingan/hasilPerbandingan.php" style="color: beige;">Back to annotation page</a>
-              
-            </li>
-          </ul>
-          <ul class="navbar-nav mr-auto">
-            <h3 style="font-family:sans-serif; color: #efb523;">Similarity Result</h3>
-          </ul>
-          <ul class="navbar-nav mr-auto">
-          <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
-          </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg bg-dark">
+          <!-- <div class="container">
+            <div class="row" >
+              <div class="col"> -->
+                  
+              <!-- </div>
+              <div class="col"> -->
+                  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+                    <!-- <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a href="/perbandingan/hasilPerbandingan.php"><button type="button" class="btn btn-primary btn-sm">Back to annotation page</button></a>
+                      </li>
+                    </ul> -->
+                    <!-- <ul class="navbar-nav mr-auto"> -->
+                        <img src="minilogo.png" alt="minilogo optan" class="float-left" href="/index.php" style="width:5em;">
+                        <h3 style="font-family:sans-serif; color: #efb523;" class="mx-auto">Similarity Result</h3>
+                    <!-- </ul> -->
+                    <!-- <ul class="navbar-nav mr-auto">
+                      <a class="d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/logout.php" style="color:beige;"><button type="button" class="btn btn-outline-secondary btn-sm">Logout</button></a>
+                    </ul> -->
+                  <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="float-right"> -->
+                <a href="/perbandingan/hasilPerbandingan.php" class="inline-block float-right"><button type="button" class="btn btn-secondary btn-sm">Back to annotation page</button></a>
+                <a class="d-none d-lg-inline-block ml-2 float-right" href="/logout.php"><button type="button" class="btn btn-secondary btn-sm">Logout</button></a>
+              <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
       </nav>
         {% block content %}{% endblock %}
         <script

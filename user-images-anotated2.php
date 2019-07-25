@@ -27,7 +27,7 @@ while ($row2 = mysqli_fetch_assoc($sql2)) {
             $style =     'display: inline-block; max-width: 98%; height: auto; width: 30%; margin: 1%;';
             $htmlimage = '<img style="'. $style . '" id="img" src="'.$row2['image'].'" alt="gambar origninal" width="200"/>' ;
 
-            echo '<a href="/python?parent_id='.$parent_id.'&path1='.$image_ori.'&path2='.$image1.'&path3='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'">' . $htmlimage . '</a>' ;
+            echo '<a href="/python?parent_id='.$parent_id.'&path1=/uploads/'.$image_ori.'&path2='.$image1.'&path3='.$image2. '&analisis1='.$analisis1. '&analisis2='.$analisis2.'">' . $htmlimage . '</a>' ;
 
         }
 

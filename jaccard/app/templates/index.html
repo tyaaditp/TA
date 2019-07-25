@@ -7,10 +7,15 @@
     <input id="parent_id" type="hidden" value="{{ parent_id }}">
     <input id="image_ori" type="hidden" value="{{ path1 }}">
     <input id="image_ano" type="hidden" value="{{ path3 }}">
+    <input id="image_ref" type="hidden" value="{{ path2 }}">
 
-    <button  style="margin:20px auto;display: block;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Select Another References</button>
+    <div style="margin:20px auto;display: block"> 
+            <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Select Another References</button>
+            <button  type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Select Another Anotated</button>
+    </div>
+    
     <!-- The Modal -->
-    <div class="modal fade" id="myModal">
+    <div class="modal fade" id="myModal1">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
       
@@ -34,6 +39,33 @@
         
             </div>
         </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal2">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Select References</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <button id="pilihref2" value="val_1" name="but1">Select Doctor</button> <select name="nama" id="listdokte2r"></select>
+                    <button id="loadimageano2" value="val_1" name="but1"> Load Image</button>
+                    <div id="images"> </div>
+                </div>
+            
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            
+                </div>
+            </div>
         </div>
    
 

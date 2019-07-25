@@ -99,6 +99,23 @@ $("#loadimageano").click(function(e) {
     });
 });
 
+$("#pilihref2").click(function(e) {
+    e.preventDefault();
+    var parent_id = $("#parent_id").val();
+    $.get('/userpython.php?parent_id='+parent_id, (data)=> {
+        console.log(data)
+      $('#listdokter2').html(data);
+    })
+});
+
+$("#loadimageano2").click(function(e) {
+    e.preventDefault();
+    $.post('/user-images-anotated.php', { user_id: $('#listdokter2').val(), parent_id:$("#parent_id").val(), image_ori:$("#image_ori").val(), image_ref:$("#image_ref").val() }, (data) => {
+      console.log(data);
+      $('#images').html(data);
+    });
+});
+
 </script>
     </body>
 </html>

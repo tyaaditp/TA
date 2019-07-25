@@ -1,1 +1,0 @@
-kamu tidak diizinkan OYYYYYYY kakakakakkak

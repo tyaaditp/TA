@@ -110,7 +110,7 @@ $("#pilihref2").click(function(e) {
 
 $("#loadimageano2").click(function(e) {
     e.preventDefault();
-    $.post('/user-images-anotated.php', { user_id: $('#listdokter2').val(), parent_id:$("#parent_id").val(), image_ori:$("#image_ori").val(), image_ref:$("#image_ref").val() }, (data) => {
+    $.post('/user-images-anotated2.php', { user_id: $('#listdokter2').val(), parent_id:$("#parent_id").val(), image_ori:$("#image_ori").val(), image_ref:$("#image_ref").val() }, (data) => {
       console.log(data);
       $('#images').html(data);
     });

@@ -520,7 +520,7 @@ function sel_local_images() {
   
   if (invisible_file_input) {
     invisible_file_input.setAttribute('multiple', 'multiple')
-    invisible_file_input.accept   = '.jpg,.jpeg,.png,.bmp';
+    invisible_file_input.accept   = '.jpg,.jpeg,.png,.bmp,.tif';
     invisible_file_input.onchange = project_file_add_local;
     invisible_file_input.click();
 
